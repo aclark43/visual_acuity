@@ -1,0 +1,2189 @@
+{
+    "schema": "1",
+    "content": {
+        "origin_info_card": {
+            "identification": "protocol_template",
+            "name": "Anonymous Protocol",
+            "version": "",
+            "description": "",
+            "author": ""
+        },
+        "subject_info_card": {
+            "identification": "anonymous_subject",
+            "first_name": "",
+            "last_name": "",
+            "notes": []
+        },
+        "common_configuration": {
+            "json": {}
+        },
+        "eyetracker_setup": {
+            "screen_width": 543,
+            "screen_height": 306,
+            "eyetracker_distance": 5110
+        },
+        "sources": [
+            {
+                "tag": {
+                    "origin": {
+                        "identification": "generic_keyboard",
+                        "name": "Generic Keyboard",
+                        "version": "1.0.0",
+                        "description": "Generic keyboard source",
+                        "author": "Santini Designs"
+                    },
+                    "additional_info": {
+                        "is_system": true,
+                        "is_hidden": true,
+                        "known_as": ""
+                    },
+                    "type_info": {
+                        "data_out": "KEYBOARD",
+                        "polling_available": false,
+                        "default_polling": -1
+                    }
+                },
+                "default_configuration": {},
+                "assets": {
+                    "icon_small_url": "opicon_small.png",
+                    "icon_large_url": "opicon_large.png"
+                }
+            },
+            {
+                "tag": {
+                    "origin": {
+                        "identification": "generic_video_card",
+                        "name": "Generic video-card",
+                        "version": "2.0.0",
+                        "description": "Generic video-card source",
+                        "author": "Santini Designs"
+                    },
+                    "additional_info": {
+                        "is_system": true,
+                        "is_hidden": true,
+                        "known_as": ""
+                    },
+                    "type_info": {
+                        "data_out": "VIDEO_CARD",
+                        "polling_available": false,
+                        "default_polling": -1
+                    }
+                },
+                "default_configuration": {},
+                "assets": {
+                    "icon_small_url": "opicon_small.png",
+                    "icon_large_url": "opicon_large.png"
+                }
+            },
+            {
+                "tag": {
+                    "origin": {
+                        "identification": "gs_16aiss16ao2",
+                        "name": "16AISS16AO2",
+                        "version": "1.0.0",
+                        "description": "IO Box Source",
+                        "author": "Soma Mizobuchi"
+                    },
+                    "additional_info": {
+                        "is_system": true,
+                        "is_hidden": true,
+                        "known_as": "analog_input"
+                    },
+                    "type_info": {
+                        "data_out": "ANALOG_DIGITAL",
+                        "polling_available": false,
+                        "default_polling": -1
+                    }
+                },
+                "default_configuration": {
+                    "channel_select": [
+                        true,
+                        true,
+                        true,
+                        true,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false
+                    ],
+                    "gain_values": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        4
+                    ],
+                    "offset_values": [
+                        0.024450000375509262,
+                        0.024450000375509262,
+                        0.024450000375509262,
+                        0.024450000375509262,
+                        0.024450000375509262,
+                        0.024450000375509262,
+                        0.024450000375509262,
+                        0.024450000375509262,
+                        0.024450000375509262,
+                        0.024450000375509262,
+                        0.024450000375509262,
+                        0.024450000375509262,
+                        0.024450000375509262,
+                        0.024450000375509262,
+                        0.024450000375509262,
+                        0.024450000375509262
+                    ],
+                    "sampling_frequency": 1000,
+                    "voltage_range": 10
+                },
+                "assets": {
+                    "icon_small_url": "opicon_small.png",
+                    "icon_large_url": "opicon_large.png"
+                }
+            },
+            {
+                "tag": {
+                    "origin": {
+                        "identification": "generic_mouse",
+                        "name": "Generic mouse",
+                        "version": "2.0.0",
+                        "description": "Generic mouse source",
+                        "author": "Santini Designs"
+                    },
+                    "additional_info": {
+                        "is_system": true,
+                        "is_hidden": true,
+                        "known_as": ""
+                    },
+                    "type_info": {
+                        "data_out": "MOUSE",
+                        "polling_available": false,
+                        "default_polling": -1
+                    }
+                },
+                "default_configuration": {},
+                "assets": {
+                    "icon_small_url": "opicon_small.png",
+                    "icon_large_url": "opicon_large.png"
+                }
+            },
+            {
+                "tag": {
+                    "origin": {
+                        "identification": "euresys_tracker",
+                        "name": "Euresys Tracker",
+                        "version": "2.0.0",
+                        "description": "Euresys Tracker frame grabber source",
+                        "author": "Soma Mizobuchi & Paul Jolly"
+                    },
+                    "additional_info": {
+                        "is_system": true,
+                        "is_hidden": true,
+                        "known_as": "euresys_tracker_input"
+                    },
+                    "type_info": {
+                        "data_out": "ANALOG_DIGITAL",
+                        "polling_available": false,
+                        "default_polling": -1
+                    }
+                },
+                "default_configuration": {
+                    "debug_enabled": false,
+                    "down_sampling_rate": 0.125,
+                    "enable_srt_stream": true,
+                    "eye1_euresys_tracker_dev": 0,
+                    "eye1_p4_intensity": 128,
+                    "eye1_p4_radius": 0.5,
+                    "eye2_euresys_tracker_dev": 4,
+                    "eye2_p4_intensity": 128,
+                    "eye2_p4_radius": 0.5,
+                    "gpu_dev": 0,
+                    "gpu_direct_enabled": false,
+                    "noise": 20,
+                    "p1_overlay_scale": 4,
+                    "p1_roi_size": 128,
+                    "p1_threshold": 250,
+                    "p4_gui_scale": 2,
+                    "p4_roi_size": 64,
+                    "recordingMode": "RIGHT",
+                    "sampling_frequency": 1000,
+                    "stream_fps": 20
+                },
+                "assets": {
+                    "icon_small_url": "opicon_small.png",
+                    "icon_large_url": "opicon_large.png"
+                }
+            },
+            {
+                "tag": {
+                    "origin": {
+                        "identification": "function_generator",
+                        "name": "Function Generator",
+                        "version": "2.0.0",
+                        "description": "Function generator that can produce a variety of analog and digital signals",
+                        "author": "Santini Designs"
+                    },
+                    "additional_info": {
+                        "is_system": true,
+                        "is_hidden": true,
+                        "known_as": "analog_input"
+                    },
+                    "type_info": {
+                        "data_out": "ANALOG_DIGITAL",
+                        "polling_available": true,
+                        "default_polling": 5
+                    }
+                },
+                "default_configuration": {},
+                "assets": {
+                    "icon_small_url": "opicon_small.png",
+                    "icon_large_url": "opicon_large.png"
+                }
+            },
+            {
+                "tag": {
+                    "origin": {
+                        "identification": "generic_joypad",
+                        "name": "Generic Joypad",
+                        "version": "1.0.0",
+                        "description": "Generic joypad source",
+                        "author": "Santini Designs"
+                    },
+                    "additional_info": {
+                        "is_system": true,
+                        "is_hidden": true,
+                        "known_as": ""
+                    },
+                    "type_info": {
+                        "data_out": "JOYPAD",
+                        "polling_available": false,
+                        "default_polling": -1
+                    }
+                },
+                "default_configuration": {
+                    "axes_layout": [
+                        "LEFT_H",
+                        "LEFT_V",
+                        "RIGHT_H",
+                        "RIGHT_V",
+                        "UNDEFINED",
+                        "UNDEFINED"
+                    ],
+                    "axes_threshold": 0.10000000149011612,
+                    "buttons_layout": [
+                        "CROSS",
+                        "CIRCLE",
+                        "TRIANGLE",
+                        "SQUARE",
+                        "L1",
+                        "R1",
+                        "L2",
+                        "R2",
+                        "SELECT",
+                        "START",
+                        "MODE",
+                        "UNDEFINED",
+                        "UNDEFINED",
+                        "UP",
+                        "RIGHT",
+                        "DOWN",
+                        "LEFT",
+                        "UNDEFINED",
+                        "UNDEFINED"
+                    ],
+                    "layout_enabled": true
+                },
+                "assets": {
+                    "icon_small_url": "opicon_small.png",
+                    "icon_large_url": "opicon_large.png"
+                }
+            }
+        ],
+        "stages": [
+            {
+                "tag": {
+                    "origin": {
+                        "identification": "reducer_digital_2_digital",
+                        "name": "Digital To Digital Reducer",
+                        "version": "3.0.0",
+                        "description": "Stage for the conversion of digital data capture in digital data slices",
+                        "author": "Santini Designs"
+                    },
+                    "additional_info": {
+                        "is_system": true,
+                        "known_as": ""
+                    }
+                },
+                "default_configuration": {},
+                "assets": {
+                    "icon_small_url": "opicon_small.png",
+                    "icon_large_url": "opicon_large.png"
+                }
+            },
+            {
+                "tag": {
+                    "origin": {
+                        "identification": "reducer_analog_digital_2_analog",
+                        "name": "A/D To Analog Reducer",
+                        "version": "3.0.0",
+                        "description": "Stage for the conversion of analog/digital data capture in analog data slices",
+                        "author": "Santini Designs"
+                    },
+                    "additional_info": {
+                        "is_system": true,
+                        "known_as": ""
+                    }
+                },
+                "default_configuration": {
+                    "analog_connected": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29,
+                        30,
+                        31,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1
+                    ]
+                },
+                "assets": {
+                    "icon_small_url": "opicon_small.png",
+                    "icon_large_url": "opicon_large.png"
+                }
+            },
+            {
+                "tag": {
+                    "origin": {
+                        "identification": "stage_dfts",
+                        "name": "DFTS Stage",
+                        "version": "3.0.0",
+                        "description": "Dropped Frames Tagging Stage (DFTS)",
+                        "author": "Santini Designs"
+                    },
+                    "additional_info": {
+                        "is_system": true,
+                        "known_as": ""
+                    }
+                },
+                "default_configuration": {
+                    "debounce_frames": 50,
+                    "presence_threshold": 0.5,
+                    "tolerance": 2,
+                    "white_threshold": 4
+                },
+                "assets": {
+                    "icon_small_url": "opicon_small.png",
+                    "icon_large_url": "opicon_large.png"
+                }
+            },
+            {
+                "tag": {
+                    "origin": {
+                        "identification": "stage_vats",
+                        "name": "VATS Stage",
+                        "version": "3.0.0",
+                        "description": "Voltage to Angle Transformation Stage (VATS)",
+                        "author": "Santini Designs"
+                    },
+                    "additional_info": {
+                        "is_system": true,
+                        "known_as": ""
+                    }
+                },
+                "default_configuration": {},
+                "assets": {
+                    "icon_small_url": "opicon_small.png",
+                    "icon_large_url": "opicon_large.png"
+                }
+            },
+            {
+                "tag": {
+                    "origin": {
+                        "identification": "reducer_analog_digital_2_eye",
+                        "name": "A/D To Eye Reducer",
+                        "version": "3.0.0",
+                        "description": "Stage for the conversion of analog/digital data capture to eye data slices",
+                        "author": "Santini Designs"
+                    },
+                    "additional_info": {
+                        "is_system": true,
+                        "known_as": ""
+                    }
+                },
+                "default_configuration": {
+                    "channels": {
+                        "modes": [
+                            {
+                                "definitions": [
+                                    {
+                                        "from": 0,
+                                        "gain": 1,
+                                        "name": "eye1_raw_x",
+                                        "offset": 0,
+                                        "to": 0,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 1,
+                                        "gain": 1,
+                                        "name": "eye1_raw_y",
+                                        "offset": 0,
+                                        "to": 1,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 4,
+                                        "gain": 1,
+                                        "name": "eye1_p1_x",
+                                        "offset": 0,
+                                        "to": 4,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 5,
+                                        "gain": 1,
+                                        "name": "eye1_p1_y",
+                                        "offset": 0,
+                                        "to": 5,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 6,
+                                        "gain": 1,
+                                        "name": "eye1_p1_roi_x",
+                                        "offset": 0,
+                                        "to": 6,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 7,
+                                        "gain": 1,
+                                        "name": "eye1_p1_roi_y",
+                                        "offset": 0,
+                                        "to": 7,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 8,
+                                        "gain": 1,
+                                        "name": "eye1_p1_intensity",
+                                        "offset": 0,
+                                        "to": 8,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 9,
+                                        "gain": 1,
+                                        "name": "eye1_p1_radius",
+                                        "offset": 0,
+                                        "to": 9,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 10,
+                                        "gain": 1,
+                                        "name": "eye1_p4_x",
+                                        "offset": 0,
+                                        "to": 10,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 11,
+                                        "gain": 1,
+                                        "name": "eye1_p4_y",
+                                        "offset": 0,
+                                        "to": 11,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 12,
+                                        "gain": 1,
+                                        "name": "eye1_p4_roi_x",
+                                        "offset": 0,
+                                        "to": 12,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 13,
+                                        "gain": 1,
+                                        "name": "eye1_p4_roi_y",
+                                        "offset": 0,
+                                        "to": 13,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 14,
+                                        "gain": 1,
+                                        "name": "eye1_p4_intensity",
+                                        "offset": 0,
+                                        "to": 14,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 15,
+                                        "gain": 1,
+                                        "name": "eye1_p4_radius",
+                                        "offset": 0,
+                                        "to": 15,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 16,
+                                        "gain": 1,
+                                        "name": "eye1_p4_score",
+                                        "offset": 0,
+                                        "to": 16,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 30,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_30",
+                                        "offset": 0,
+                                        "to": 30,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 31,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_31",
+                                        "offset": 0,
+                                        "to": 31,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 32,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_32",
+                                        "offset": 0,
+                                        "to": 32,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 33,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_33",
+                                        "offset": 0,
+                                        "to": 33,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 34,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_34",
+                                        "offset": 0,
+                                        "to": 34,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 35,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_35",
+                                        "offset": 0,
+                                        "to": 35,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 36,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_36",
+                                        "offset": 0,
+                                        "to": 36,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 37,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_37",
+                                        "offset": 0,
+                                        "to": 37,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 38,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_38",
+                                        "offset": 0,
+                                        "to": 38,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 39,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_39",
+                                        "offset": 0,
+                                        "to": 39,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 40,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_40",
+                                        "offset": 0,
+                                        "to": 40,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 41,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_41",
+                                        "offset": 0,
+                                        "to": 41,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 42,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_42",
+                                        "offset": 0,
+                                        "to": 42,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 43,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_43",
+                                        "offset": 0,
+                                        "to": 43,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 44,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_44",
+                                        "offset": 0,
+                                        "to": 44,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 45,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_45",
+                                        "offset": 0,
+                                        "to": 45,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 46,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_46",
+                                        "offset": 0,
+                                        "to": 46,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 47,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_47",
+                                        "offset": 0,
+                                        "to": 47,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 12,
+                                        "name": "eye1_blinking",
+                                        "negate": false,
+                                        "to": 12,
+                                        "type": "DIGITAL"
+                                    },
+                                    {
+                                        "from": 13,
+                                        "name": "eye1_tracking",
+                                        "negate": false,
+                                        "to": 13,
+                                        "type": "DIGITAL"
+                                    }
+                                ],
+                                "operational_mode": "MONOCULAR"
+                            },
+                            {
+                                "definitions": [
+                                    {
+                                        "from": 0,
+                                        "gain": 1,
+                                        "name": "eye1_raw_x",
+                                        "offset": 0,
+                                        "to": 0,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 1,
+                                        "gain": 1,
+                                        "name": "eye1_raw_y",
+                                        "offset": 0,
+                                        "to": 1,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 4,
+                                        "gain": 1,
+                                        "name": "eye1_p1_x",
+                                        "offset": 0,
+                                        "to": 4,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 5,
+                                        "gain": 1,
+                                        "name": "eye1_p1_y",
+                                        "offset": 0,
+                                        "to": 5,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 6,
+                                        "gain": 1,
+                                        "name": "eye1_p1_roi_x",
+                                        "offset": 0,
+                                        "to": 6,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 7,
+                                        "gain": 1,
+                                        "name": "eye1_p1_roi_y",
+                                        "offset": 0,
+                                        "to": 7,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 8,
+                                        "gain": 1,
+                                        "name": "eye1_p1_intensity",
+                                        "offset": 0,
+                                        "to": 8,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 9,
+                                        "gain": 1,
+                                        "name": "eye1_p1_radius",
+                                        "offset": 0,
+                                        "to": 9,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 10,
+                                        "gain": 1,
+                                        "name": "eye1_p4_x",
+                                        "offset": 0,
+                                        "to": 10,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 11,
+                                        "gain": 1,
+                                        "name": "eye1_p4_y",
+                                        "offset": 0,
+                                        "to": 11,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 12,
+                                        "gain": 1,
+                                        "name": "eye1_p4_roi_x",
+                                        "offset": 0,
+                                        "to": 12,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 13,
+                                        "gain": 1,
+                                        "name": "eye1_p4_roi_y",
+                                        "offset": 0,
+                                        "to": 13,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 14,
+                                        "gain": 1,
+                                        "name": "eye1_p4_intensity",
+                                        "offset": 0,
+                                        "to": 14,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 15,
+                                        "gain": 1,
+                                        "name": "eye1_p4_radius",
+                                        "offset": 0,
+                                        "to": 15,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 16,
+                                        "gain": 1,
+                                        "name": "eye1_p4_score",
+                                        "offset": 0,
+                                        "to": 16,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 12,
+                                        "name": "eye1_blinking",
+                                        "negate": false,
+                                        "to": 12,
+                                        "type": "DIGITAL"
+                                    },
+                                    {
+                                        "from": 13,
+                                        "name": "eye1_tracking",
+                                        "negate": false,
+                                        "to": 13,
+                                        "type": "DIGITAL"
+                                    },
+                                    {
+                                        "from": 2,
+                                        "gain": 1,
+                                        "name": "eye2_raw_x",
+                                        "offset": 0,
+                                        "to": 2,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 3,
+                                        "gain": 1,
+                                        "name": "eye2_raw_y",
+                                        "offset": 0,
+                                        "to": 3,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 17,
+                                        "gain": 1,
+                                        "name": "eye2_p1_x",
+                                        "offset": 0,
+                                        "to": 17,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 18,
+                                        "gain": 1,
+                                        "name": "eye2_p1_y",
+                                        "offset": 0,
+                                        "to": 18,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 19,
+                                        "gain": 1,
+                                        "name": "eye2_p1_roi_x",
+                                        "offset": 0,
+                                        "to": 19,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 20,
+                                        "gain": 1,
+                                        "name": "eye2_p1_roi_y",
+                                        "offset": 0,
+                                        "to": 20,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 21,
+                                        "gain": 1,
+                                        "name": "eye2_p1_intensity",
+                                        "offset": 0,
+                                        "to": 21,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 22,
+                                        "gain": 1,
+                                        "name": "eye2_p1_radius",
+                                        "offset": 0,
+                                        "to": 22,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 23,
+                                        "gain": 1,
+                                        "name": "eye2_p4_x",
+                                        "offset": 0,
+                                        "to": 23,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 24,
+                                        "gain": 1,
+                                        "name": "eye2_p4_y",
+                                        "offset": 0,
+                                        "to": 24,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 25,
+                                        "gain": 1,
+                                        "name": "eye2_p4_roi_x",
+                                        "offset": 0,
+                                        "to": 25,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 26,
+                                        "gain": 1,
+                                        "name": "eye2_p4_roi_y",
+                                        "offset": 0,
+                                        "to": 26,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 27,
+                                        "gain": 1,
+                                        "name": "eye2_p4_intensity",
+                                        "offset": 0,
+                                        "to": 27,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 28,
+                                        "gain": 1,
+                                        "name": "eye2_p4_radius",
+                                        "offset": 0,
+                                        "to": 28,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 29,
+                                        "gain": 1,
+                                        "name": "eye2_p4_score",
+                                        "offset": 0,
+                                        "to": 29,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 30,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_30",
+                                        "offset": 0,
+                                        "to": 30,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 31,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_31",
+                                        "offset": 0,
+                                        "to": 31,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 32,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_32",
+                                        "offset": 0,
+                                        "to": 32,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 33,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_33",
+                                        "offset": 0,
+                                        "to": 33,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 34,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_34",
+                                        "offset": 0,
+                                        "to": 34,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 35,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_35",
+                                        "offset": 0,
+                                        "to": 35,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 36,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_36",
+                                        "offset": 0,
+                                        "to": 36,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 37,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_37",
+                                        "offset": 0,
+                                        "to": 37,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 38,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_38",
+                                        "offset": 0,
+                                        "to": 38,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 39,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_39",
+                                        "offset": 0,
+                                        "to": 39,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 40,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_40",
+                                        "offset": 0,
+                                        "to": 40,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 41,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_41",
+                                        "offset": 0,
+                                        "to": 41,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 42,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_42",
+                                        "offset": 0,
+                                        "to": 42,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 43,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_43",
+                                        "offset": 0,
+                                        "to": 43,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 44,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_44",
+                                        "offset": 0,
+                                        "to": 44,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 45,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_45",
+                                        "offset": 0,
+                                        "to": 45,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 46,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_46",
+                                        "offset": 0,
+                                        "to": 46,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 47,
+                                        "gain": 1,
+                                        "name": "NEW_CHANNEL_47",
+                                        "offset": 0,
+                                        "to": 47,
+                                        "type": "ANALOG"
+                                    },
+                                    {
+                                        "from": 14,
+                                        "name": "eye2_blinking",
+                                        "negate": false,
+                                        "to": 14,
+                                        "type": "DIGITAL"
+                                    },
+                                    {
+                                        "from": 15,
+                                        "name": "eye2_tracking",
+                                        "negate": false,
+                                        "to": 15,
+                                        "type": "DIGITAL"
+                                    }
+                                ],
+                                "operational_mode": "BINOCULAR"
+                            }
+                        ],
+                        "selected": "UNSELECTED"
+                    }
+                },
+                "assets": {
+                    "icon_small_url": "opicon_small.png",
+                    "icon_large_url": "opicon_large.png"
+                }
+            },
+            {
+                "tag": {
+                    "origin": {
+                        "identification": "reducer_analog_2_eye",
+                        "name": "Analog To Eye Reducer",
+                        "version": "3.0.0",
+                        "description": "Stage for the conversion of analog data capture to eye data slices",
+                        "author": "Santini Designs"
+                    },
+                    "additional_info": {
+                        "is_system": true,
+                        "known_as": ""
+                    }
+                },
+                "default_configuration": {
+                    "analog_connected": [
+                        0,
+                        -1,
+                        1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1
+                    ],
+                    "virtual_active": [
+                        0,
+                        1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1
+                    ]
+                },
+                "assets": {
+                    "icon_small_url": "opicon_small.png",
+                    "icon_large_url": "opicon_large.png"
+                }
+            },
+            {
+                "tag": {
+                    "origin": {
+                        "identification": "reducer_analog_2_analog",
+                        "name": "Analog To Analog Reducer",
+                        "version": "3.0.0",
+                        "description": "Stage for the conversion of analog data capture in analog data slices",
+                        "author": "Santini Designs"
+                    },
+                    "additional_info": {
+                        "is_system": true,
+                        "known_as": ""
+                    }
+                },
+                "default_configuration": {
+                    "analog_connected": [
+                        0,
+                        1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1
+                    ]
+                },
+                "assets": {
+                    "icon_small_url": "opicon_small.png",
+                    "icon_large_url": "opicon_large.png"
+                }
+            },
+            {
+                "tag": {
+                    "origin": {
+                        "identification": "reducer_video_card",
+                        "name": "Video-card Reducer",
+                        "version": "3.0.0",
+                        "description": "Stage for the conversion of video-card data capture in video-card data slices",
+                        "author": "Santini Designs"
+                    },
+                    "additional_info": {
+                        "is_system": true,
+                        "known_as": ""
+                    }
+                },
+                "default_configuration": {},
+                "assets": {
+                    "icon_small_url": "opicon_small.png",
+                    "icon_large_url": "opicon_large.png"
+                }
+            },
+            {
+                "tag": {
+                    "origin": {
+                        "identification": "reducer_analog_2_monitor",
+                        "name": "Analog To Monitor Reducer",
+                        "version": "3.0.0",
+                        "description": "Stage for the conversion of analog data capture to monitor data slices",
+                        "author": "Santini Designs"
+                    },
+                    "additional_info": {
+                        "is_system": true,
+                        "known_as": ""
+                    }
+                },
+                "default_configuration": {
+                    "intensity_channel": 15,
+                    "presence_threshold": 0.5
+                },
+                "assets": {
+                    "icon_small_url": "opicon_small.png",
+                    "icon_large_url": "opicon_large.png"
+                }
+            },
+            {
+                "tag": {
+                    "origin": {
+                        "identification": "reducer_analog_digital_2_digital",
+                        "name": "A/D To Digital Reducer",
+                        "version": "3.0.0",
+                        "description": "Stage for the conversion of analog/digital data capture in digital data slices",
+                        "author": "Santini Designs"
+                    },
+                    "additional_info": {
+                        "is_system": true,
+                        "known_as": ""
+                    }
+                },
+                "default_configuration": {},
+                "assets": {
+                    "icon_small_url": "opicon_small.png",
+                    "icon_large_url": "opicon_large.png"
+                }
+            },
+            {
+                "tag": {
+                    "origin": {
+                        "identification": "reducer_keyboard",
+                        "name": "Keyboard Reducer",
+                        "version": "3.0.0",
+                        "description": "Stage for the conversion of keyboard data capture in keyboard data slices",
+                        "author": "Santini Designs"
+                    },
+                    "additional_info": {
+                        "is_system": true,
+                        "known_as": ""
+                    }
+                },
+                "default_configuration": {},
+                "assets": {
+                    "icon_small_url": "opicon_small.png",
+                    "icon_large_url": "opicon_large.png"
+                }
+            },
+            {
+                "tag": {
+                    "origin": {
+                        "identification": "reducer_mouse",
+                        "name": "Mouse Reducer",
+                        "version": "3.0.0",
+                        "description": "Stage for the conversion of mouse data capture in mouse data slices",
+                        "author": "Santini Designs"
+                    },
+                    "additional_info": {
+                        "is_system": true,
+                        "known_as": ""
+                    }
+                },
+                "default_configuration": {},
+                "assets": {
+                    "icon_small_url": "opicon_small.png",
+                    "icon_large_url": "opicon_large.png"
+                }
+            },
+            {
+                "tag": {
+                    "origin": {
+                        "identification": "reducer_analog_digital_2_monitor",
+                        "name": "A/D To Monitor Reducer",
+                        "version": "3.0.0",
+                        "description": "Stage for the conversion of analog/digital data capture in monitor data slices",
+                        "author": "Santini Designs"
+                    },
+                    "additional_info": {
+                        "is_system": true,
+                        "known_as": ""
+                    }
+                },
+                "default_configuration": {
+                    "intensity_channel": 0,
+                    "presence_threshold": 0.5
+                },
+                "assets": {
+                    "icon_small_url": "opicon_small.png",
+                    "icon_large_url": "opicon_large.png"
+                }
+            },
+            {
+                "tag": {
+                    "origin": {
+                        "identification": "reducer_joypad",
+                        "name": "Joypad Reducer",
+                        "version": "3.0.0",
+                        "description": "Stage for the conversion of joypad data capture in joypad data slices",
+                        "author": "Santini Designs"
+                    },
+                    "additional_info": {
+                        "is_system": true,
+                        "known_as": ""
+                    }
+                },
+                "default_configuration": {},
+                "assets": {
+                    "icon_small_url": "opicon_small.png",
+                    "icon_large_url": "opicon_large.png"
+                }
+            }
+        ],
+        "operational_modes": [
+            {
+                "operational_mode": "MONOCULAR",
+                "streams": [
+                    {
+                        "origin": {
+                            "identification": "stream_analog",
+                            "name": "Analog Stream",
+                            "version": "",
+                            "description": "Stream for the collection of analog data",
+                            "author": "Santini Designs"
+                        },
+                        "target_inlet": "ANALOG",
+                        "accepted_data_in": [
+                            "ANALOG",
+                            "ANALOG_DIGITAL"
+                        ],
+                        "data_in": "ANALOG_DIGITAL",
+                        "data_through": "ANALOG",
+                        "source": "gs_16aiss16ao2",
+                        "reducer": "reducer_analog_digital_2_analog",
+                        "stages": [],
+                        "sync": false
+                    },
+                    {
+                        "origin": {
+                            "identification": "stream_digital",
+                            "name": "Digital Stream",
+                            "version": "",
+                            "description": "Stream for the collection of digital data",
+                            "author": "Santini Designs"
+                        },
+                        "target_inlet": "DIGITAL",
+                        "accepted_data_in": [
+                            "DIGITAL",
+                            "ANALOG_DIGITAL"
+                        ],
+                        "data_in": "ANALOG_DIGITAL",
+                        "data_through": "DIGITAL",
+                        "source": "function_generator",
+                        "reducer": "reducer_analog_digital_2_digital",
+                        "stages": [],
+                        "sync": false
+                    },
+                    {
+                        "origin": {
+                            "identification": "stream_eye",
+                            "name": "Eye Stream",
+                            "version": "",
+                            "description": "Stream for the collection of eye movement data",
+                            "author": "Santini Designs"
+                        },
+                        "target_inlet": "EYE",
+                        "accepted_data_in": [
+                            "ANALOG",
+                            "ANALOG_DIGITAL"
+                        ],
+                        "data_in": "ANALOG_DIGITAL",
+                        "data_through": "EYE",
+                        "source": "euresys_tracker",
+                        "reducer": "reducer_analog_digital_2_eye",
+                        "stages": [
+                            "stage_vats"
+                        ],
+                        "sync": true
+                    },
+                    {
+                        "origin": {
+                            "identification": "stream_joypad",
+                            "name": "Joypad Stream",
+                            "version": "",
+                            "description": "Stream for the collection of joypad data",
+                            "author": "Santini Designs"
+                        },
+                        "target_inlet": "JOYPAD",
+                        "accepted_data_in": [
+                            "JOYPAD"
+                        ],
+                        "data_in": "JOYPAD",
+                        "data_through": "JOYPAD",
+                        "source": "generic_joypad",
+                        "reducer": "reducer_joypad",
+                        "stages": [],
+                        "sync": false
+                    },
+                    {
+                        "origin": {
+                            "identification": "stream_keyboard",
+                            "name": "Keyboard Stream",
+                            "version": "",
+                            "description": "Stream for the collection of keyboard data",
+                            "author": "Santini Designs"
+                        },
+                        "target_inlet": "KEYBOARD",
+                        "accepted_data_in": [
+                            "KEYBOARD"
+                        ],
+                        "data_in": "KEYBOARD",
+                        "data_through": "KEYBOARD",
+                        "source": "generic_keyboard",
+                        "reducer": "reducer_keyboard",
+                        "stages": [],
+                        "sync": false
+                    },
+                    {
+                        "origin": {
+                            "identification": "stream_monitor",
+                            "name": "Monitor Stream",
+                            "version": "",
+                            "description": "Stream for the collection of monitor data",
+                            "author": "Santini Designs"
+                        },
+                        "target_inlet": "MONITOR",
+                        "accepted_data_in": [
+                            "ANALOG",
+                            "ANALOG_DIGITAL"
+                        ],
+                        "data_in": "ANALOG_DIGITAL",
+                        "data_through": "MONITOR",
+                        "source": "gs_16aiss16ao2",
+                        "reducer": "reducer_analog_digital_2_monitor",
+                        "stages": [
+                            "stage_dfts"
+                        ],
+                        "sync": false
+                    },
+                    {
+                        "origin": {
+                            "identification": "stream_mouse",
+                            "name": "Mouse Stream",
+                            "version": "",
+                            "description": "Stream for the collection of mouse data",
+                            "author": "Santini Designs"
+                        },
+                        "target_inlet": "MOUSE",
+                        "accepted_data_in": [
+                            "MOUSE"
+                        ],
+                        "data_in": "MOUSE",
+                        "data_through": "MOUSE",
+                        "source": "generic_mouse",
+                        "reducer": "reducer_mouse",
+                        "stages": [],
+                        "sync": false
+                    },
+                    {
+                        "origin": {
+                            "identification": "stream_video_card",
+                            "name": "Video-card Stream",
+                            "version": "",
+                            "description": "Stream for the collection of video-card data",
+                            "author": "Santini Designs"
+                        },
+                        "target_inlet": "VIDEO_CARD",
+                        "accepted_data_in": [
+                            "VIDEO_CARD"
+                        ],
+                        "data_in": "VIDEO_CARD",
+                        "data_through": "VIDEO_CARD",
+                        "source": "generic_video_card",
+                        "reducer": "reducer_video_card",
+                        "stages": [],
+                        "sync": false
+                    }
+                ]
+            },
+            {
+                "operational_mode": "BINOCULAR",
+                "streams": [
+                    {
+                        "origin": {
+                            "identification": "stream_analog",
+                            "name": "Analog Stream",
+                            "version": "",
+                            "description": "Stream for the collection of analog data",
+                            "author": "Santini Designs"
+                        },
+                        "target_inlet": "ANALOG",
+                        "accepted_data_in": [
+                            "ANALOG",
+                            "ANALOG_DIGITAL"
+                        ],
+                        "data_in": "ANALOG_DIGITAL",
+                        "data_through": "ANALOG",
+                        "source": "gs_16aiss16ao2",
+                        "reducer": "reducer_analog_digital_2_analog",
+                        "stages": [],
+                        "sync": false
+                    },
+                    {
+                        "origin": {
+                            "identification": "stream_digital",
+                            "name": "Digital Stream",
+                            "version": "",
+                            "description": "Stream for the collection of digital data",
+                            "author": "Santini Designs"
+                        },
+                        "target_inlet": "DIGITAL",
+                        "accepted_data_in": [
+                            "DIGITAL",
+                            "ANALOG_DIGITAL"
+                        ],
+                        "data_in": "ANALOG_DIGITAL",
+                        "data_through": "DIGITAL",
+                        "source": "function_generator",
+                        "reducer": "reducer_analog_digital_2_digital",
+                        "stages": [],
+                        "sync": false
+                    },
+                    {
+                        "origin": {
+                            "identification": "stream_eye",
+                            "name": "Eye Stream",
+                            "version": "",
+                            "description": "Stream for the collection of eye movement data",
+                            "author": "Santini Designs"
+                        },
+                        "target_inlet": "EYE",
+                        "accepted_data_in": [
+                            "ANALOG",
+                            "ANALOG_DIGITAL"
+                        ],
+                        "data_in": "ANALOG_DIGITAL",
+                        "data_through": "EYE",
+                        "source": "euresys_tracker",
+                        "reducer": "reducer_analog_digital_2_eye",
+                        "stages": [
+                            "stage_vats"
+                        ],
+                        "sync": true
+                    },
+                    {
+                        "origin": {
+                            "identification": "stream_joypad",
+                            "name": "Joypad Stream",
+                            "version": "",
+                            "description": "Stream for the collection of joypad data",
+                            "author": "Santini Designs"
+                        },
+                        "target_inlet": "JOYPAD",
+                        "accepted_data_in": [
+                            "JOYPAD"
+                        ],
+                        "data_in": "JOYPAD",
+                        "data_through": "JOYPAD",
+                        "source": "generic_joypad",
+                        "reducer": "reducer_joypad",
+                        "stages": [],
+                        "sync": false
+                    },
+                    {
+                        "origin": {
+                            "identification": "stream_keyboard",
+                            "name": "Keyboard Stream",
+                            "version": "",
+                            "description": "Stream for the collection of keyboard data",
+                            "author": "Santini Designs"
+                        },
+                        "target_inlet": "KEYBOARD",
+                        "accepted_data_in": [
+                            "KEYBOARD"
+                        ],
+                        "data_in": "KEYBOARD",
+                        "data_through": "KEYBOARD",
+                        "source": "generic_keyboard",
+                        "reducer": "reducer_keyboard",
+                        "stages": [],
+                        "sync": false
+                    },
+                    {
+                        "origin": {
+                            "identification": "stream_monitor",
+                            "name": "Monitor Stream",
+                            "version": "",
+                            "description": "Stream for the collection of monitor data",
+                            "author": "Santini Designs"
+                        },
+                        "target_inlet": "MONITOR",
+                        "accepted_data_in": [
+                            "ANALOG",
+                            "ANALOG_DIGITAL"
+                        ],
+                        "data_in": "ANALOG_DIGITAL",
+                        "data_through": "MONITOR",
+                        "source": "gs_16aiss16ao2",
+                        "reducer": "reducer_analog_digital_2_monitor",
+                        "stages": [
+                            "stage_dfts"
+                        ],
+                        "sync": false
+                    },
+                    {
+                        "origin": {
+                            "identification": "stream_mouse",
+                            "name": "Mouse Stream",
+                            "version": "",
+                            "description": "Stream for the collection of mouse data",
+                            "author": "Santini Designs"
+                        },
+                        "target_inlet": "MOUSE",
+                        "accepted_data_in": [
+                            "MOUSE"
+                        ],
+                        "data_in": "MOUSE",
+                        "data_through": "MOUSE",
+                        "source": "generic_mouse",
+                        "reducer": "reducer_mouse",
+                        "stages": [],
+                        "sync": false
+                    },
+                    {
+                        "origin": {
+                            "identification": "stream_video_card",
+                            "name": "Video-card Stream",
+                            "version": "",
+                            "description": "Stream for the collection of video-card data",
+                            "author": "Santini Designs"
+                        },
+                        "target_inlet": "VIDEO_CARD",
+                        "accepted_data_in": [
+                            "VIDEO_CARD"
+                        ],
+                        "data_in": "VIDEO_CARD",
+                        "data_through": "VIDEO_CARD",
+                        "source": "generic_video_card",
+                        "reducer": "reducer_video_card",
+                        "stages": [],
+                        "sync": false
+                    }
+                ]
+            }
+        ],
+        "jobs": [
+            {
+                "tag": {
+                    "origin": {
+                        "identification": "automatic_calibration_h2",
+                        "name": "Auto Calibration (H2)",
+                        "version": "1.0.0",
+                        "description": "Monocular automatic calibration for humans",
+                        "author": "Santini Designs"
+                    },
+                    "additional_info": {
+                        "is_system": true,
+                        "known_as": ""
+                    },
+                    "type_info": {}
+                },
+                "default_configuration": {
+                    "custom": {
+                        "badal": 1,
+                        "debug_enabled": false,
+                        "max_data": 1000,
+                        "min_valid_data": 10,
+                        "mirror": 1,
+                        "number_of_points": 9,
+                        "number_of_quadrants": 4,
+                        "point_x_offset": 150,
+                        "point_y_offset": 150,
+                        "prepoint_wait": 0,
+                        "reaction_delay": 250,
+                        "std_dev_threshold": 10,
+                        "stimulus_color": {
+                            "b": 255,
+                            "g": 255,
+                            "r": 255
+                        },
+                        "stimulus_filename": "cross.tga",
+                        "stroke_width (arcmin)": 4
+                    },
+                    "task": {
+                        "background_color": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        },
+                        "capabilities": {
+                            "esc_enabled": true,
+                            "photocell_enabled": true,
+                            "joypad_clear_enabled": true,
+                            "joypad_select_enabled": true,
+                            "joypad_start_enabled": false,
+                            "stats1_enabled": true,
+                            "stats2_enabled": true
+                        },
+                        "photocell": {
+                            "width": 150,
+                            "height": 150,
+                            "quadrant": "II_QUADRANT",
+                            "color_on": {
+                                "r": 255,
+                                "g": 255,
+                                "b": 255
+                            },
+                            "color_off": {
+                                "r": 105,
+                                "g": 105,
+                                "b": 105
+                            }
+                        },
+                        "stats1": {
+                            "color": {
+                                "r": 169,
+                                "g": 169,
+                                "b": 169
+                            },
+                            "font": "FONTS_ARIAL_REGULAR_12",
+                            "quadrant": "IV_QUADRANT"
+                        },
+                        "stats2": {
+                            "color": {
+                                "r": 169,
+                                "g": 169,
+                                "b": 169
+                            },
+                            "font": "FONTS_ARIAL_REGULAR_12",
+                            "quadrant": "III_QUADRANT"
+                        },
+                        "video_mode": {
+                            "width": 0,
+                            "height": 0,
+                            "refresh_rate": 0,
+                            "red_depth": 8,
+                            "green_depth": 8,
+                            "blue_depth": 8,
+                            "hide_cursor": true
+                        }
+                    },
+                    "job": {
+                        "operational_mode": "MONOCULAR",
+                        "output_monitor": ""
+                    }
+                },
+                "assets": {
+                    "icon_small_url": "opicon_small.png",
+                    "icon_large_url": "opicon_large.png"
+                }
+            },
+            {
+                "tag": {
+                    "origin": {
+                        "identification": "manual_calibration",
+                        "name": "Manual Calibration",
+                        "version": "1.0.0",
+                        "description": "New task auto-generated by Insight wizard (1.0.0)",
+                        "author": "Janis Intoy"
+                    },
+                    "additional_info": {
+                        "known_as": ""
+                    },
+                    "type_info": {}
+                },
+                "default_configuration": {
+                    "custom": {
+                        "Binocular_Calibration": false,
+                        "alpha": 0.5,
+                        "badal": 1,
+                        "debug_enabled": false,
+                        "fix_cross_b": 0,
+                        "fix_cross_g": 0,
+                        "fix_cross_r": 0,
+                        "left_cross_b": 0,
+                        "left_cross_g": 255,
+                        "left_cross_r": 0,
+                        "min_valid_data": 100,
+                        "mirror": 1,
+                        "number_of_points": 9,
+                        "number_of_quadrants": 4,
+                        "point_x_offset": 150,
+                        "point_y_offset": 150,
+                        "reaction_delay": 50,
+                        "right_cross_b": 0,
+                        "right_cross_g": 0,
+                        "right_cross_r": 255,
+                        "show_aperture": false,
+                        "std_dev_threshold": 10,
+                        "stimulus_filename": "cross.tga",
+                        "stroke_width (arcmin)": 4,
+                        "x_offset_jog": 200,
+                        "y_offset_jog": 200
+                    },
+                    "task": {
+                        "background_color": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        },
+                        "capabilities": {
+                            "esc_enabled": true,
+                            "photocell_enabled": false,
+                            "joypad_clear_enabled": true,
+                            "joypad_select_enabled": true,
+                            "joypad_start_enabled": false,
+                            "stats1_enabled": true,
+                            "stats2_enabled": true
+                        },
+                        "photocell": {
+                            "width": 150,
+                            "height": 150,
+                            "quadrant": "II_QUADRANT",
+                            "color_on": {
+                                "r": 255,
+                                "g": 255,
+                                "b": 255
+                            },
+                            "color_off": {
+                                "r": 105,
+                                "g": 105,
+                                "b": 105
+                            }
+                        },
+                        "stats1": {
+                            "color": {
+                                "r": 169,
+                                "g": 169,
+                                "b": 169
+                            },
+                            "font": "FONTS_ARIAL_REGULAR_12",
+                            "quadrant": "IV_QUADRANT"
+                        },
+                        "stats2": {
+                            "color": {
+                                "r": 169,
+                                "g": 169,
+                                "b": 169
+                            },
+                            "font": "FONTS_ARIAL_REGULAR_12",
+                            "quadrant": "III_QUADRANT"
+                        },
+                        "video_mode": {
+                            "width": 0,
+                            "height": 0,
+                            "refresh_rate": 0,
+                            "red_depth": 8,
+                            "green_depth": 8,
+                            "blue_depth": 8,
+                            "hide_cursor": true
+                        }
+                    },
+                    "job": {
+                        "operational_mode": "MONOCULAR",
+                        "output_monitor": ""
+                    }
+                },
+                "assets": {
+                    "icon_small_url": "opicon_small.png",
+                    "icon_large_url": "opicon_large.png"
+                }
+            },
+            {
+                "tag": {
+                    "origin": {
+                        "identification": "visual_acuity",
+                        "name": "visual_acuity",
+                        "version": "1.0.0",
+                        "description": "New task auto-generated by Insight wizard (1.0.0)",
+                        "author": "Insight New Task Wizard"
+                    },
+                    "additional_info": {
+                        "known_as": ""
+                    },
+                    "type_info": {}
+                },
+                "default_configuration": {
+                    "custom": {
+                        "Badal": 1,
+                        "BlankScreenTime": 400,
+                        "BoxSize": 120,
+                        "DataDestination": 1147237473,
+                        "FixTime": 5000,
+                        "FixationSize": 10,
+                        "FixedContrast": 0,
+                        "FixedTargetStrokewidth": 6,
+                        "FlankerDist": 1,
+                        "FlankerType": 1,
+                        "HoldTime": 2000,
+                        "IsPest": 1,
+                        "MagFactor": 1,
+                        "Mirror": 1,
+                        "NFixation": 7,
+                        "NHits": 0,
+                        "NRecal": 1,
+                        "NTrials": 300,
+                        "PestInit": 10,
+                        "PestLevel": 1,
+                        "Stimulus": 2,
+                        "StimulusColor": 255,
+                        "SubjectName": 21323,
+                        "TargetEccentricity": 0,
+                        "TargetTime": 500,
+                        "UnStab": 1,
+                        "Uncrowded": 1,
+                        "XRes": 1920,
+                        "YRes": 1080,
+                        "scotoma": 0
+                    },
+                    "task": {
+                        "background_color": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        },
+                        "capabilities": {
+                            "esc_enabled": true,
+                            "photocell_enabled": true,
+                            "joypad_clear_enabled": true,
+                            "joypad_select_enabled": true,
+                            "joypad_start_enabled": false,
+                            "stats1_enabled": true,
+                            "stats2_enabled": true
+                        },
+                        "photocell": {
+                            "width": 150,
+                            "height": 150,
+                            "quadrant": "II_QUADRANT",
+                            "color_on": {
+                                "r": 255,
+                                "g": 255,
+                                "b": 255
+                            },
+                            "color_off": {
+                                "r": 105,
+                                "g": 105,
+                                "b": 105
+                            }
+                        },
+                        "stats1": {
+                            "color": {
+                                "r": 169,
+                                "g": 169,
+                                "b": 169
+                            },
+                            "font": "FONTS_ARIAL_REGULAR_12",
+                            "quadrant": "IV_QUADRANT"
+                        },
+                        "stats2": {
+                            "color": {
+                                "r": 169,
+                                "g": 169,
+                                "b": 169
+                            },
+                            "font": "FONTS_ARIAL_REGULAR_12",
+                            "quadrant": "III_QUADRANT"
+                        },
+                        "video_mode": {
+                            "width": 0,
+                            "height": 0,
+                            "refresh_rate": 0,
+                            "red_depth": 8,
+                            "green_depth": 8,
+                            "blue_depth": 8,
+                            "hide_cursor": true
+                        }
+                    },
+                    "job": {
+                        "operational_mode": "MONOCULAR",
+                        "output_monitor": ""
+                    }
+                },
+                "assets": {
+                    "icon_small_url": "opicon_small.png",
+                    "icon_large_url": "opicon_large.png"
+                }
+            }
+        ],
+        "consoles": [],
+        "system_consoles": []
+    }
+}

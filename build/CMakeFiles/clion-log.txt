@@ -1,0 +1,4 @@
+/home/eyeris/clion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -G "CodeBlocks - Unix Makefiles" /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/build

@@ -1,0 +1,4 @@
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity -B /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug
