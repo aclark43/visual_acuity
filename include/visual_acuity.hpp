@@ -213,7 +213,7 @@ namespace user_tasks::visual_acuity {
     int MagFactor,magnificationFactor;
     int XRes;
     int YRes;
-    int UnStab;
+    bool UnStab;
     int X,Y;
     int TargetImage,TargetOrientation;
     int xFlankers1;

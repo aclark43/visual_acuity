@@ -56,7 +56,7 @@ namespace user_tasks::visual_acuity {
             initializeNRecal(1);
             initializeNFixation(3);
             initializeFixTime(5000);
-            initializeHoldTime(2000);
+            initializeHoldTime(5000);
             initializeTargetTime(500);
             initializeBlankScreenTime(400);
             initializeDataDestination('Data');

@@ -109,6 +109,7 @@ namespace user_tasks::visual_acuity {
         MagFactor = getConfiguration() -> getMagFactor();
         TargetEccentricity = round(getConfiguration() -> getTargetEccentricity()/pixelAngle);
         Uncrowded = getConfiguration() -> getUncrowded();
+        UnStab = getConfiguration() -> getUnStab();
         NRecal = getConfiguration() -> getNRecal();
         NTrials = getConfiguration() -> getNTrials();
         NFixation = getConfiguration() -> getNFixation();
@@ -249,17 +250,18 @@ namespace user_tasks::visual_acuity {
             m_fixationEcc->hide();
         }
 
-        if (UnStab == true)
-        {
+//        if (UnStab == true)
+//        {
             X = 0;
             Y = 0;
-        }
-        else
-        {
-            auto slice = data->getLatest();
-            X = getAngleConverter()->arcmin2PixelH(slice->calibrated1.x()) + xshift;
-            Y = getAngleConverter()->arcmin2PixelV(slice->calibrated1.y()) + yshift;
-        }
+            m_target->hide();
+//        }
+//        else
+//        {
+//            auto slice = data->getLatest();
+//            X = getAngleConverter()->arcmin2PixelH(slice->calibrated1.x()) + xshift;
+//            Y = getAngleConverter()->arcmin2PixelV(slice->calibrated1.y()) + yshift;
+//        }
 
 
 
@@ -421,14 +423,14 @@ namespace user_tasks::visual_acuity {
 
 
                 } else if ((gate == 1) && (!m_timerTarget.hasExpired())) {
-                    m_target->show();
                     if (Uncrowded == false)
                     {
-
                         m_flankers1->show();
                         m_flankers2->show();
                         m_flankers3->show();
                         m_flankers4->show();
+
+
 
                         m_flankers1->setSize(2 * TargetStrokewidth, 10 * TargetStrokewidth);
                         m_flankers2->setSize(2 * TargetStrokewidth, 10 * TargetStrokewidth);
@@ -438,9 +440,22 @@ namespace user_tasks::visual_acuity {
                     }
                     if (UnStab == true)
                             {
-                                m_target->setPosition(X, Y);
-                            }
 
+                                m_target->setPosition(X, Y); // sk change
+                                //info("I am here");
+                                //m_target->setPosition(X, Y);
+                                m_target->show();
+                            }
+                    else if (UnStab == false)
+                            {
+                                auto slice = data->getLatest();
+                                m_target->setPosition(getAngleConverter()->arcmin2PixelH(slice->calibrated1.x()) + xshift,
+                                getAngleConverter()->arcmin2PixelV(slice->calibrated1.y()) + yshift); // sk change
+                                //info("I am here");
+                                //m_target->setPosition(X, Y);
+                                m_target->show();
+                            }
+                    //
                     moveToFront(m_target);
                     if (scotoma == true)
                     {
@@ -517,6 +532,7 @@ namespace user_tasks::visual_acuity {
 
     void visual_acuity::gotoFixation()
     {
+        info("stab {}",UnStab);
         info("\n going to fixation: " + std::to_string(TestCalibration));
 
         if (!(TestCalibration == 1)) {
@@ -583,6 +599,7 @@ namespace user_tasks::visual_acuity {
                 }
 
                 info(("Eccentricity:"+ std::to_string(TargetEccentricity),"Target:" + std::to_string(TargetImage),"Strokewidth:" + std::to_string(TargetStrokewidth)));
+                info("Condition {} ", Uncrowded);
                 if (Stimulus == 1) {
                     if (Mirror == false & Badal == false) {
                         switch (TargetImage) {
@@ -784,14 +801,15 @@ namespace user_tasks::visual_acuity {
                     m_target->setSize(5 * TargetStrokewidth, 5 * TargetStrokewidth);
                 }
 
-                //m_target->set(0, targetGray);
                 if (UnStab == true) {
-                    m_target->setPosition(0 + TargetEccentricity, 0);
+                    m_target->setPosition(0 + TargetEccentricity, 0); //sk change
+                    //info("I should be here");
                     m_target->hide();
                 }
                 else if (UnStab == false)
                 {
-                    m_target->setPosition(X + TargetEccentricity, Y);
+//                    m_target->setPosition(getAngleConverter()->arcmin2PixelH(slice->calibrated1.x()) + xshift + TargetEccentricity, Y);
+//                    info("NOT HERE //////");
                     m_target->hide();
                 }
                 if (scotoma == true)
@@ -803,15 +821,15 @@ namespace user_tasks::visual_acuity {
                 if (Uncrowded == false) {
                     //int fo;
                     //FlankerOrientations = 0;
-                    info("Im here!");
+                    //info("Im here!");
                     for (int ii = 0; ii < 5; ii++) { //hard coded for 4 flankers total
                         fo = rand() % 4 + 1;
 //                        while (fo == TargetOrientation) //flankers will not match the target
 //                        {
 //                            fo = (rand() % 3) + 1;
 //                        }
-                        info("fo{}",fo);
-                        info("ii{}",ii);
+                       // info("fo{}",fo);
+                      //  info("ii{}",ii);
 
                         if (ii == 1) {
                             FlankerOrientations = 10 * FlankerOrientations +
@@ -833,15 +851,13 @@ namespace user_tasks::visual_acuity {
                                 }
                             }
 
-                            info("past cases!");
-                           // if (UnStab == true) {
-                                m_flankers1->setPosition(xFlankers1,
-                                                            yFlankers1);
-//                            } else if (UnStab == false) {
-//                                m_flankers1->setPosition(
-//                                        X + (-TargetEccentricity) - xFlankers1,
-//                                        Y + yFlankers1);
-//                            }
+                          //  info("past cases!");
+                            if (UnStab == true) {
+                                m_flankers1->setPosition(xFlankers1,yFlankers1);
+                            }
+                            else if (UnStab == false) {
+                                m_flankers1->setPosition(xFlankers1+X,yFlankers1+Y);
+                            }
 
                             //m_flankers[ii]->setSize(2 * TargetStrokewidth, 10 * TargetStrokewidth);
                             //m_flankers[ii]->setColor(EIS_RGB(fixedContrast, fixedContrast, fixedContrast));
@@ -870,15 +886,12 @@ namespace user_tasks::visual_acuity {
                                 }
                             }
 
-                            info("past cases!");
-                           // if (UnStab == true) {
-                                m_flankers2->setPosition(xFlankers2,
-                                                         yFlankers2);
-//                            } else if (UnStab == false) {
-//                                m_flankers2->setPosition(
-//                                        X + (-TargetEccentricity) - xFlankers2,
-//                                        Y + yFlankers2);
-//                            }
+                            if (UnStab == true) {
+                                m_flankers2->setPosition(xFlankers2,yFlankers2);
+                            }
+                            else if (UnStab == false) {
+                                m_flankers2->setPosition(xFlankers2+X,yFlankers2+Y);
+                            }
 
                             //m_flankers[ii]->setSize(2 * TargetStrokewidth, 10 * TargetStrokewidth);
                             //m_flankers[ii]->setColor(EIS_RGB(fixedContrast, fixedContrast, fixedContrast));
@@ -907,14 +920,12 @@ namespace user_tasks::visual_acuity {
                                 }
                             }
 
-                            info("past cases!");
-                            //if (UnStab == true) {
+                            if (UnStab == true) {
                                 m_flankers3->setPosition(xFlankers3,yFlankers3);
-//                            } else if (UnStab == false) {
-//                                m_flankers3->setPosition(
-//                                        X + (-TargetEccentricity) - xFlankers3,
-//                                        Y + yFlankers3);
-//                            }
+                            }
+                            else if (UnStab == false) {
+                                m_flankers3->setPosition(xFlankers3+X,yFlankers3+Y);
+                            }
 
                             //m_flankers[ii]->setSize(2 * TargetStrokewidth, 10 * TargetStrokewidth);
                             //m_flankers[ii]->setColor(EIS_RGB(fixedContrast, fixedContrast, fixedContrast));
@@ -943,10 +954,12 @@ namespace user_tasks::visual_acuity {
                                 }
                             }
 
-                            info("past cases update 7:37!");
-                            //if (UnStab == true) {
+                            if (UnStab == true) {
                                 m_flankers4->setPosition(xFlankers4,yFlankers4);
-                           // }
+                            }
+                            else if (UnStab == false) {
+                                m_flankers4->setPosition(xFlankers4+X,yFlankers4+Y);
+                            }
 //                        else if (UnStab == false) {
 //                                m_flankers4->setPosition(
 //                                        X + (-TargetEccentricity) - xFlankers4,
