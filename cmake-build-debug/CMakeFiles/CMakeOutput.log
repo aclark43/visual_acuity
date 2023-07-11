@@ -15,13 +15,13 @@ The CXX compiler identification is Clang, found in "/home/eyeris/runtime/dev_ws/
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_33f5d/fast && /usr/bin/make -f CMakeFiles/cmTC_33f5d.dir/build.make CMakeFiles/cmTC_33f5d.dir/build
+Run Build Command(s):/usr/bin/make cmTC_965b9/fast && /usr/bin/make -f CMakeFiles/cmTC_965b9.dir/build.make CMakeFiles/cmTC_965b9.dir/build
 make[1]: Entering directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_33f5d.dir/testCXXCompiler.cxx.o
-/usr/bin/clang++     -o CMakeFiles/cmTC_33f5d.dir/testCXXCompiler.cxx.o -c /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_33f5d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_33f5d.dir/link.txt --verbose=1
-/usr/bin/clang++       CMakeFiles/cmTC_33f5d.dir/testCXXCompiler.cxx.o  -o cmTC_33f5d 
+Building CXX object CMakeFiles/cmTC_965b9.dir/testCXXCompiler.cxx.o
+/usr/bin/clang++     -o CMakeFiles/cmTC_965b9.dir/testCXXCompiler.cxx.o -c /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_965b9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_965b9.dir/link.txt --verbose=1
+/usr/bin/clang++       CMakeFiles/cmTC_965b9.dir/testCXXCompiler.cxx.o  -o cmTC_965b9 
 make[1]: Leaving directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -29,10 +29,10 @@ make[1]: Leaving directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_bd0da/fast && /usr/bin/make -f CMakeFiles/cmTC_bd0da.dir/build.make CMakeFiles/cmTC_bd0da.dir/build
+Run Build Command(s):/usr/bin/make cmTC_466c0/fast && /usr/bin/make -f CMakeFiles/cmTC_466c0.dir/build.make CMakeFiles/cmTC_466c0.dir/build
 make[1]: Entering directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_bd0da.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/clang++    -v -o CMakeFiles/cmTC_bd0da.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp
+Building CXX object CMakeFiles/cmTC_466c0.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/clang++    -v -o CMakeFiles/cmTC_466c0.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp
 clang version 10.0.0-4ubuntu1 
 Target: x86_64-pc-linux-gnu
 Thread model: posix
@@ -46,7 +46,7 @@ Candidate multilib: .;@m64
 Selected multilib: .;@m64
 Found CUDA installation: /usr/local/cuda, version 7.0
  (in-process)
- "/usr/lib/llvm-10/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mthread-model posix -mframe-pointer=all -fmath-errno -fno-rounding-math -masm-verbose -mconstructor-aliases -munwind-tables -target-cpu x86-64 -dwarf-column-info -fno-split-dwarf-inlining -debugger-tuning=gdb -v -resource-dir /usr/lib/llvm-10/lib/clang/10.0.0 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/x86_64-linux-gnu/c++/9 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/x86_64-linux-gnu/c++/9 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/backward -internal-isystem /usr/local/include -internal-isystem /usr/lib/llvm-10/lib/clang/10.0.0/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fgnuc-version=4.2.1 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -faddrsig -o CMakeFiles/cmTC_bd0da.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp
+ "/usr/lib/llvm-10/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mthread-model posix -mframe-pointer=all -fmath-errno -fno-rounding-math -masm-verbose -mconstructor-aliases -munwind-tables -target-cpu x86-64 -dwarf-column-info -fno-split-dwarf-inlining -debugger-tuning=gdb -v -resource-dir /usr/lib/llvm-10/lib/clang/10.0.0 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/x86_64-linux-gnu/c++/9 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/x86_64-linux-gnu/c++/9 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/backward -internal-isystem /usr/local/include -internal-isystem /usr/lib/llvm-10/lib/clang/10.0.0/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fgnuc-version=4.2.1 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -faddrsig -o CMakeFiles/cmTC_466c0.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp
 clang -cc1 version 10.0.0 based upon LLVM 10.0.0 default target x86_64-pc-linux-gnu
 ignoring nonexistent directory "/include"
 ignoring duplicate directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/x86_64-linux-gnu/c++/9"
@@ -60,9 +60,9 @@ ignoring duplicate directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../..
  /usr/include/x86_64-linux-gnu
  /usr/include
 End of search list.
-Linking CXX executable cmTC_bd0da
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bd0da.dir/link.txt --verbose=1
-/usr/bin/clang++      -v CMakeFiles/cmTC_bd0da.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_bd0da 
+Linking CXX executable cmTC_466c0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_466c0.dir/link.txt --verbose=1
+/usr/bin/clang++      -v CMakeFiles/cmTC_466c0.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_466c0 
 clang version 10.0.0-4ubuntu1 
 Target: x86_64-pc-linux-gnu
 Thread model: posix
@@ -75,7 +75,7 @@ Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/9
 Candidate multilib: .;@m64
 Selected multilib: .;@m64
 Found CUDA installation: /usr/local/cuda, version 7.0
- "/usr/bin/ld" -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_bd0da /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crt1.o /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/9/crtbegin.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/9 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/x86_64-linux-gnu/../../lib64 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../.. -L/usr/lib/llvm-10/bin/../lib -L/lib -L/usr/lib -L/usr/local/cuda/lib64/stubs CMakeFiles/cmTC_bd0da.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/9/crtend.o /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o
+ "/usr/bin/ld" -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_466c0 /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crt1.o /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/9/crtbegin.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/9 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/x86_64-linux-gnu/../../lib64 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../.. -L/usr/lib/llvm-10/bin/../lib -L/lib -L/usr/lib -L/usr/local/cuda/lib64/stubs CMakeFiles/cmTC_466c0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/9/crtend.o /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o
 make[1]: Leaving directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -105,10 +105,10 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/make cmTC_bd0da/fast && /usr/bin/make -f CMakeFiles/cmTC_bd0da.dir/build.make CMakeFiles/cmTC_bd0da.dir/build]
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_466c0/fast && /usr/bin/make -f CMakeFiles/cmTC_466c0.dir/build.make CMakeFiles/cmTC_466c0.dir/build]
   ignore line: [make[1]: Entering directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_bd0da.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/clang++    -v -o CMakeFiles/cmTC_bd0da.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Building CXX object CMakeFiles/cmTC_466c0.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/clang++    -v -o CMakeFiles/cmTC_466c0.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp]
   ignore line: [clang version 10.0.0-4ubuntu1 ]
   ignore line: [Target: x86_64-pc-linux-gnu]
   ignore line: [Thread model: posix]
@@ -124,7 +124,7 @@ Parsed CXX implicit link information from above output:
   ignore line: [@m64]
   ignore line: [Found CUDA installation: /usr/local/cuda  version 7.0]
   ignore line: [ (in-process)]
-  ignore line: [ "/usr/lib/llvm-10/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mthread-model posix -mframe-pointer=all -fmath-errno -fno-rounding-math -masm-verbose -mconstructor-aliases -munwind-tables -target-cpu x86-64 -dwarf-column-info -fno-split-dwarf-inlining -debugger-tuning=gdb -v -resource-dir /usr/lib/llvm-10/lib/clang/10.0.0 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/x86_64-linux-gnu/c++/9 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/x86_64-linux-gnu/c++/9 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/backward -internal-isystem /usr/local/include -internal-isystem /usr/lib/llvm-10/lib/clang/10.0.0/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fgnuc-version=4.2.1 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -faddrsig -o CMakeFiles/cmTC_bd0da.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [ "/usr/lib/llvm-10/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mthread-model posix -mframe-pointer=all -fmath-errno -fno-rounding-math -masm-verbose -mconstructor-aliases -munwind-tables -target-cpu x86-64 -dwarf-column-info -fno-split-dwarf-inlining -debugger-tuning=gdb -v -resource-dir /usr/lib/llvm-10/lib/clang/10.0.0 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/x86_64-linux-gnu/c++/9 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/x86_64-linux-gnu/c++/9 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/backward -internal-isystem /usr/local/include -internal-isystem /usr/lib/llvm-10/lib/clang/10.0.0/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fgnuc-version=4.2.1 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -faddrsig -o CMakeFiles/cmTC_466c0.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp]
   ignore line: [clang -cc1 version 10.0.0 based upon LLVM 10.0.0 default target x86_64-pc-linux-gnu]
   ignore line: [ignoring nonexistent directory "/include"]
   ignore line: [ignoring duplicate directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/x86_64-linux-gnu/c++/9"]
@@ -138,9 +138,9 @@ Parsed CXX implicit link information from above output:
   ignore line: [ /usr/include/x86_64-linux-gnu]
   ignore line: [ /usr/include]
   ignore line: [End of search list.]
-  ignore line: [Linking CXX executable cmTC_bd0da]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bd0da.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/clang++      -v CMakeFiles/cmTC_bd0da.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_bd0da ]
+  ignore line: [Linking CXX executable cmTC_466c0]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_466c0.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/clang++      -v CMakeFiles/cmTC_466c0.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_466c0 ]
   ignore line: [clang version 10.0.0-4ubuntu1 ]
   ignore line: [Target: x86_64-pc-linux-gnu]
   ignore line: [Thread model: posix]
@@ -155,7 +155,7 @@ Parsed CXX implicit link information from above output:
   ignore line: [Selected multilib: .]
   ignore line: [@m64]
   ignore line: [Found CUDA installation: /usr/local/cuda  version 7.0]
-  link line: [ "/usr/bin/ld" -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_bd0da /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crt1.o /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/9/crtbegin.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/9 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/x86_64-linux-gnu/../../lib64 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../.. -L/usr/lib/llvm-10/bin/../lib -L/lib -L/usr/lib -L/usr/local/cuda/lib64/stubs CMakeFiles/cmTC_bd0da.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/9/crtend.o /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o]
+  link line: [ "/usr/bin/ld" -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_466c0 /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crt1.o /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/9/crtbegin.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/9 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/x86_64-linux-gnu/../../lib64 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../.. -L/usr/lib/llvm-10/bin/../lib -L/lib -L/usr/lib -L/usr/local/cuda/lib64/stubs CMakeFiles/cmTC_466c0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/9/crtend.o /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/bin/ld] ==> ignore
     arg [-zrelro] ==> ignore
     arg [--hash-style=gnu] ==> ignore
@@ -166,7 +166,7 @@ Parsed CXX implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_bd0da] ==> ignore
+    arg [cmTC_466c0] ==> ignore
     arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/9/crtbegin.o] ==> ignore
@@ -183,7 +183,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/lib] ==> dir [/lib]
     arg [-L/usr/lib] ==> dir [/usr/lib]
     arg [-L/usr/local/cuda/lib64/stubs] ==> dir [/usr/local/cuda/lib64/stubs]
-    arg [CMakeFiles/cmTC_bd0da.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_466c0.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -214,13 +214,13 @@ Parsed CXX implicit link information from above output:
 Determining if the include file pthread.h exists passed with the following output:
 Change Dir: /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_b1e80/fast && /usr/bin/make -f CMakeFiles/cmTC_b1e80.dir/build.make CMakeFiles/cmTC_b1e80.dir/build
+Run Build Command(s):/usr/bin/make cmTC_4a743/fast && /usr/bin/make -f CMakeFiles/cmTC_4a743.dir/build.make CMakeFiles/cmTC_4a743.dir/build
 make[1]: Entering directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_b1e80.dir/CheckIncludeFile.cxx.o
-/usr/bin/clang++     -o CMakeFiles/cmTC_b1e80.dir/CheckIncludeFile.cxx.o -c /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
-Linking CXX executable cmTC_b1e80
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b1e80.dir/link.txt --verbose=1
-/usr/bin/clang++       CMakeFiles/cmTC_b1e80.dir/CheckIncludeFile.cxx.o  -o cmTC_b1e80 
+Building CXX object CMakeFiles/cmTC_4a743.dir/CheckIncludeFile.cxx.o
+/usr/bin/clang++     -o CMakeFiles/cmTC_4a743.dir/CheckIncludeFile.cxx.o -c /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_4a743
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4a743.dir/link.txt --verbose=1
+/usr/bin/clang++       CMakeFiles/cmTC_4a743.dir/CheckIncludeFile.cxx.o  -o cmTC_4a743 
 make[1]: Leaving directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -228,13 +228,13 @@ make[1]: Leaving directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity
 Determining if the function pthread_create exists in the pthread passed with the following output:
 Change Dir: /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_999c7/fast && /usr/bin/make -f CMakeFiles/cmTC_999c7.dir/build.make CMakeFiles/cmTC_999c7.dir/build
+Run Build Command(s):/usr/bin/make cmTC_05b07/fast && /usr/bin/make -f CMakeFiles/cmTC_05b07.dir/build.make CMakeFiles/cmTC_05b07.dir/build
 make[1]: Entering directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_999c7.dir/CheckFunctionExists.cxx.o
-/usr/bin/clang++    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_999c7.dir/CheckFunctionExists.cxx.o -c /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
-Linking CXX executable cmTC_999c7
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_999c7.dir/link.txt --verbose=1
-/usr/bin/clang++   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_999c7.dir/CheckFunctionExists.cxx.o  -o cmTC_999c7  -lpthread 
+Building CXX object CMakeFiles/cmTC_05b07.dir/CheckFunctionExists.cxx.o
+/usr/bin/clang++    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_05b07.dir/CheckFunctionExists.cxx.o -c /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_05b07
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_05b07.dir/link.txt --verbose=1
+/usr/bin/clang++   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_05b07.dir/CheckFunctionExists.cxx.o  -o cmTC_05b07  -lpthread 
 make[1]: Leaving directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -242,13 +242,13 @@ make[1]: Leaving directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity
 Determining if the function XOpenDisplay exists in the /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so passed with the following output:
 Change Dir: /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_8eb22/fast && /usr/bin/make -f CMakeFiles/cmTC_8eb22.dir/build.make CMakeFiles/cmTC_8eb22.dir/build
+Run Build Command(s):/usr/bin/make cmTC_b8aa1/fast && /usr/bin/make -f CMakeFiles/cmTC_b8aa1.dir/build.make CMakeFiles/cmTC_b8aa1.dir/build
 make[1]: Entering directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_8eb22.dir/CheckFunctionExists.cxx.o
-/usr/bin/clang++    -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTC_8eb22.dir/CheckFunctionExists.cxx.o -c /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
-Linking CXX executable cmTC_8eb22
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8eb22.dir/link.txt --verbose=1
-/usr/bin/clang++   -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTC_8eb22.dir/CheckFunctionExists.cxx.o  -o cmTC_8eb22  /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so 
+Building CXX object CMakeFiles/cmTC_b8aa1.dir/CheckFunctionExists.cxx.o
+/usr/bin/clang++    -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTC_b8aa1.dir/CheckFunctionExists.cxx.o -c /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_b8aa1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b8aa1.dir/link.txt --verbose=1
+/usr/bin/clang++   -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTC_b8aa1.dir/CheckFunctionExists.cxx.o  -o cmTC_b8aa1  /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so 
 make[1]: Leaving directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -256,13 +256,13 @@ make[1]: Leaving directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity
 Determining if the function gethostbyname exists passed with the following output:
 Change Dir: /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_c6f5e/fast && /usr/bin/make -f CMakeFiles/cmTC_c6f5e.dir/build.make CMakeFiles/cmTC_c6f5e.dir/build
+Run Build Command(s):/usr/bin/make cmTC_2d2db/fast && /usr/bin/make -f CMakeFiles/cmTC_2d2db.dir/build.make CMakeFiles/cmTC_2d2db.dir/build
 make[1]: Entering directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_c6f5e.dir/CheckFunctionExists.cxx.o
-/usr/bin/clang++    -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTC_c6f5e.dir/CheckFunctionExists.cxx.o -c /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CheckFunctionExists/CheckFunctionExists.cxx
-Linking CXX executable cmTC_c6f5e
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c6f5e.dir/link.txt --verbose=1
-/usr/bin/clang++   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTC_c6f5e.dir/CheckFunctionExists.cxx.o  -o cmTC_c6f5e 
+Building CXX object CMakeFiles/cmTC_2d2db.dir/CheckFunctionExists.cxx.o
+/usr/bin/clang++    -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTC_2d2db.dir/CheckFunctionExists.cxx.o -c /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CheckFunctionExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_2d2db
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2d2db.dir/link.txt --verbose=1
+/usr/bin/clang++   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTC_2d2db.dir/CheckFunctionExists.cxx.o  -o cmTC_2d2db 
 make[1]: Leaving directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -270,13 +270,13 @@ make[1]: Leaving directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity
 Determining if the function connect exists passed with the following output:
 Change Dir: /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_8fa12/fast && /usr/bin/make -f CMakeFiles/cmTC_8fa12.dir/build.make CMakeFiles/cmTC_8fa12.dir/build
+Run Build Command(s):/usr/bin/make cmTC_53ab7/fast && /usr/bin/make -f CMakeFiles/cmTC_53ab7.dir/build.make CMakeFiles/cmTC_53ab7.dir/build
 make[1]: Entering directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_8fa12.dir/CheckFunctionExists.cxx.o
-/usr/bin/clang++    -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTC_8fa12.dir/CheckFunctionExists.cxx.o -c /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CheckFunctionExists/CheckFunctionExists.cxx
-Linking CXX executable cmTC_8fa12
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8fa12.dir/link.txt --verbose=1
-/usr/bin/clang++   -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTC_8fa12.dir/CheckFunctionExists.cxx.o  -o cmTC_8fa12 
+Building CXX object CMakeFiles/cmTC_53ab7.dir/CheckFunctionExists.cxx.o
+/usr/bin/clang++    -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTC_53ab7.dir/CheckFunctionExists.cxx.o -c /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CheckFunctionExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_53ab7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_53ab7.dir/link.txt --verbose=1
+/usr/bin/clang++   -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTC_53ab7.dir/CheckFunctionExists.cxx.o  -o cmTC_53ab7 
 make[1]: Leaving directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -284,13 +284,13 @@ make[1]: Leaving directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity
 Determining if the function remove exists passed with the following output:
 Change Dir: /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_5a90b/fast && /usr/bin/make -f CMakeFiles/cmTC_5a90b.dir/build.make CMakeFiles/cmTC_5a90b.dir/build
+Run Build Command(s):/usr/bin/make cmTC_59eec/fast && /usr/bin/make -f CMakeFiles/cmTC_59eec.dir/build.make CMakeFiles/cmTC_59eec.dir/build
 make[1]: Entering directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_5a90b.dir/CheckFunctionExists.cxx.o
-/usr/bin/clang++    -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTC_5a90b.dir/CheckFunctionExists.cxx.o -c /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CheckFunctionExists/CheckFunctionExists.cxx
-Linking CXX executable cmTC_5a90b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5a90b.dir/link.txt --verbose=1
-/usr/bin/clang++   -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTC_5a90b.dir/CheckFunctionExists.cxx.o  -o cmTC_5a90b 
+Building CXX object CMakeFiles/cmTC_59eec.dir/CheckFunctionExists.cxx.o
+/usr/bin/clang++    -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTC_59eec.dir/CheckFunctionExists.cxx.o -c /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CheckFunctionExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_59eec
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_59eec.dir/link.txt --verbose=1
+/usr/bin/clang++   -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTC_59eec.dir/CheckFunctionExists.cxx.o  -o cmTC_59eec 
 make[1]: Leaving directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -298,13 +298,13 @@ make[1]: Leaving directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity
 Determining if the function shmat exists passed with the following output:
 Change Dir: /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_bf744/fast && /usr/bin/make -f CMakeFiles/cmTC_bf744.dir/build.make CMakeFiles/cmTC_bf744.dir/build
+Run Build Command(s):/usr/bin/make cmTC_7c579/fast && /usr/bin/make -f CMakeFiles/cmTC_7c579.dir/build.make CMakeFiles/cmTC_7c579.dir/build
 make[1]: Entering directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_bf744.dir/CheckFunctionExists.cxx.o
-/usr/bin/clang++    -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTC_bf744.dir/CheckFunctionExists.cxx.o -c /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CheckFunctionExists/CheckFunctionExists.cxx
-Linking CXX executable cmTC_bf744
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bf744.dir/link.txt --verbose=1
-/usr/bin/clang++   -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTC_bf744.dir/CheckFunctionExists.cxx.o  -o cmTC_bf744 
+Building CXX object CMakeFiles/cmTC_7c579.dir/CheckFunctionExists.cxx.o
+/usr/bin/clang++    -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTC_7c579.dir/CheckFunctionExists.cxx.o -c /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CheckFunctionExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_7c579
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7c579.dir/link.txt --verbose=1
+/usr/bin/clang++   -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTC_7c579.dir/CheckFunctionExists.cxx.o  -o cmTC_7c579 
 make[1]: Leaving directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -312,13 +312,13 @@ make[1]: Leaving directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity
 Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
 Change Dir: /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_613fd/fast && /usr/bin/make -f CMakeFiles/cmTC_613fd.dir/build.make CMakeFiles/cmTC_613fd.dir/build
+Run Build Command(s):/usr/bin/make cmTC_bd133/fast && /usr/bin/make -f CMakeFiles/cmTC_bd133.dir/build.make CMakeFiles/cmTC_bd133.dir/build
 make[1]: Entering directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_613fd.dir/CheckFunctionExists.cxx.o
-/usr/bin/clang++    -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTC_613fd.dir/CheckFunctionExists.cxx.o -c /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
-Linking CXX executable cmTC_613fd
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_613fd.dir/link.txt --verbose=1
-/usr/bin/clang++   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTC_613fd.dir/CheckFunctionExists.cxx.o  -o cmTC_613fd  -lICE 
+Building CXX object CMakeFiles/cmTC_bd133.dir/CheckFunctionExists.cxx.o
+/usr/bin/clang++    -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTC_bd133.dir/CheckFunctionExists.cxx.o -c /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_bd133
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bd133.dir/link.txt --verbose=1
+/usr/bin/clang++   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTC_bd133.dir/CheckFunctionExists.cxx.o  -o cmTC_bd133  -lICE 
 make[1]: Leaving directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 

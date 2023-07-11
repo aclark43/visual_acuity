@@ -1,21 +1,21 @@
 Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_cb4dd/fast && /usr/bin/make -f CMakeFiles/cmTC_cb4dd.dir/build.make CMakeFiles/cmTC_cb4dd.dir/build
+Run Build Command(s):/usr/bin/make cmTC_613fc/fast && /usr/bin/make -f CMakeFiles/cmTC_613fc.dir/build.make CMakeFiles/cmTC_613fc.dir/build
 make[1]: Entering directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_cb4dd.dir/src.cxx.o
-/usr/bin/clang++    -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_cb4dd.dir/src.cxx.o -c /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_cb4dd
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cb4dd.dir/link.txt --verbose=1
-/usr/bin/clang++   -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_cb4dd.dir/src.cxx.o  -o cmTC_cb4dd 
-/usr/bin/ld: CMakeFiles/cmTC_cb4dd.dir/src.cxx.o: in function `main':
+Building CXX object CMakeFiles/cmTC_613fc.dir/src.cxx.o
+/usr/bin/clang++    -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_613fc.dir/src.cxx.o -c /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_613fc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_613fc.dir/link.txt --verbose=1
+/usr/bin/clang++   -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_613fc.dir/src.cxx.o  -o cmTC_613fc 
+/usr/bin/ld: CMakeFiles/cmTC_613fc.dir/src.cxx.o: in function `main':
 src.cxx:(.text+0x35): undefined reference to `pthread_create'
 /usr/bin/ld: src.cxx:(.text+0x41): undefined reference to `pthread_detach'
 /usr/bin/ld: src.cxx:(.text+0x53): undefined reference to `pthread_join'
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make[1]: *** [CMakeFiles/cmTC_cb4dd.dir/build.make:87: cmTC_cb4dd] Error 1
+make[1]: *** [CMakeFiles/cmTC_613fc.dir/build.make:87: cmTC_613fc] Error 1
 make[1]: Leaving directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_cb4dd/fast] Error 2
+make: *** [Makefile:121: cmTC_613fc/fast] Error 2
 
 
 Source file was:
@@ -41,18 +41,18 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_e847b/fast && /usr/bin/make -f CMakeFiles/cmTC_e847b.dir/build.make CMakeFiles/cmTC_e847b.dir/build
+Run Build Command(s):/usr/bin/make cmTC_2a71e/fast && /usr/bin/make -f CMakeFiles/cmTC_2a71e.dir/build.make CMakeFiles/cmTC_2a71e.dir/build
 make[1]: Entering directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_e847b.dir/CheckFunctionExists.cxx.o
-/usr/bin/clang++    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_e847b.dir/CheckFunctionExists.cxx.o -c /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
-Linking CXX executable cmTC_e847b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e847b.dir/link.txt --verbose=1
-/usr/bin/clang++   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_e847b.dir/CheckFunctionExists.cxx.o  -o cmTC_e847b  -lpthreads 
+Building CXX object CMakeFiles/cmTC_2a71e.dir/CheckFunctionExists.cxx.o
+/usr/bin/clang++    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_2a71e.dir/CheckFunctionExists.cxx.o -c /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_2a71e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2a71e.dir/link.txt --verbose=1
+/usr/bin/clang++   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_2a71e.dir/CheckFunctionExists.cxx.o  -o cmTC_2a71e  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make[1]: *** [CMakeFiles/cmTC_e847b.dir/build.make:87: cmTC_e847b] Error 1
+make[1]: *** [CMakeFiles/cmTC_2a71e.dir/build.make:87: cmTC_2a71e] Error 1
 make[1]: Leaving directory '/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/cmake-build-debug/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_e847b/fast] Error 2
+make: *** [Makefile:121: cmTC_2a71e/fast] Error 2
 
 
 

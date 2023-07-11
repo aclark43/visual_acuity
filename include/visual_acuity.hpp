@@ -191,10 +191,11 @@ namespace user_tasks::visual_acuity {
     std::string SubjectName;
     std::string  DataDestination;
     float scotomaPixelAngleSize;
-    float multi_val;
+    int multi_val;
     int TargetEccentricity;
     int Uncrowded;
     int FlankerType;
+    bool RandFlankerDist;
     int FlankerDist;
     int FlankerOrientations;
     int IsPest;

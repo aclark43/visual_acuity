@@ -43,6 +43,7 @@ namespace user_tasks::visual_acuity {
         {
             initializeSubjectName('SK');
             initializeTargetEccentricity(0);
+            initializeRandFlankerDist(false);
             initializeUncrowded(true);
             initializeFlankerType(1);
             initializeFlankerDist(1.4);
@@ -76,6 +77,7 @@ namespace user_tasks::visual_acuity {
         LC_PROPERTY_INT(STIMULUS,"Stimulus", Stimulus);
         LC_PROPERTY_INT(STIMULUS_COLOR,"StimulusColor", StimulusColor);
         LC_PROPERTY_INT(TARGET_ECCENTRICITY,"TargetEccentricity", TargetEccentricity);
+        LC_PROPERTY_INT(RAND_FLANKER_DIST,"RandFlankerDist", RandFlankerDist);
         LC_PROPERTY_INT(UNCROWDED,"Uncrowded", Uncrowded);
         LC_PROPERTY_INT(FLANKER_TYPE,"FlankerType", FlankerType);
         LC_PROPERTY_INT(FLANKER_DIST,"FlankerDist", FlankerDist);
