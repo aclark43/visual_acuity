@@ -128,7 +128,7 @@ namespace user_tasks::visual_acuity {
         m_holdTime = std::chrono::milliseconds(getConfiguration()->getHoldTime()); //response time
         FixationSize = getConfiguration() -> getFixationSize()/pixelAngle;
         if (Stimulus == 1){m_fixation = newSolidPlane(FixationSize,FixationSize,eye::graphics::RGB(0,255,0));}
-        else {m_fixation = newSolidPlane(FixationSize,FixationSize,eye::graphics::RGB(0,0,0));}
+        else {m_fixation = newSolidPlane(FixationSize,FixationSize,eye::graphics::RGB(0,255,0));}
 
         m_fixation->setPosition(0,0);
         m_fixation->setSize(FixationSize, FixationSize);
@@ -434,10 +434,10 @@ namespace user_tasks::visual_acuity {
 
 
 
-                        m_flankers1->setSize(2 * TargetStrokewidth, 10 * TargetStrokewidth);
-                        m_flankers2->setSize(2 * TargetStrokewidth, 10 * TargetStrokewidth);
-                        m_flankers3->setSize(2 * TargetStrokewidth, 10 * TargetStrokewidth);
-                        m_flankers4->setSize(2 * TargetStrokewidth, 10 * TargetStrokewidth);
+                        m_flankers1->setSize(1 * TargetStrokewidth, 5 * TargetStrokewidth);
+                        m_flankers2->setSize(1 * TargetStrokewidth, 5 * TargetStrokewidth);
+                        m_flankers3->setSize(1 * TargetStrokewidth, 5 * TargetStrokewidth);
+                        m_flankers4->setSize(1 * TargetStrokewidth, 5 * TargetStrokewidth);
 
                     }
                     if (UnStab == true)
@@ -705,7 +705,7 @@ namespace user_tasks::visual_acuity {
                                 break;
                         }
                     }
-                    m_target->setSize(2 * TargetStrokewidth, 10 * TargetStrokewidth);
+                    m_target->setSize(1 * TargetStrokewidth, 5 * TargetStrokewidth);
 
                     if (Uncrowded == 1)
                     {
@@ -716,24 +716,50 @@ namespace user_tasks::visual_acuity {
 
                         // figure out where the flankers will be positioned (xFlanker and yFlanker contain center coordinates)
                         FlankerType = getConfiguration()->getFlankerType();
-                        multi_val = rand() % 4 + 1;;//
+                        multi_val = rand() % 6 + 1;;//
 
                         RandFlankerDist = getConfiguration()-> getRandFlankerDist();
-                        FlankerDist = 1.4;
+                        //FlankerDist = 1.4;
                         //FlankerOrientations = -1; // uncrowded, will change if crowded
                         //float optoDim = 5.0;
-
+                        info("multi_val = {}", multi_val);
                         if( RandFlankerDist == true)
                         {
-                            switch (multi_val)
+                            if (multi_val == 1)
                             {
-                                case 1: {FlankerDist = 1.1;}
-                                case 2: {FlankerDist = 1.2;}
-                                case 3: {FlankerDist = 1.4;}
-                                case 4: {FlankerDist = 1.8;}
-                                case 5: {FlankerDist = 2;}
+                                FlankerDist = 1.85f;
                             }
+                            else if (multi_val == 2)
+                            {
+                                FlankerDist = 1.75f;
+                            }
+                            else if (multi_val == 3)
+                            {
+                                FlankerDist = 1.0f;
+                            }
+                            else if (multi_val == 4)
+                            {
+                                FlankerDist = 1.25f;
+                            }
+                            else if (multi_val == 5)
+                            {
+                                FlankerDist = 0.95f;
+                            }
+                            else if (multi_val == 6)
+                            {
+                                FlankerDist = 200000.0f;
+                            }
+
+//                            switch (multi_val)
+//                            {
+//                                case 1: {FlankerDist = 0.5;}
+//                                case 2: {FlankerDist = 0.75;}
+//                                case 3: {FlankerDist = 1;}
+//                                case 4: {FlankerDist = 1.5;}
+//                                case 5: {FlankerDist = 2;}
+//                            }
                         }
+                        info("Flanker Dist = {}", FlankerDist);
 //                        else if ( RandFlankerDist == false)
 //                        {
 //                            FlankerDist = 1.4;//getConfiguration()-> getFlankerDist();
@@ -745,15 +771,15 @@ namespace user_tasks::visual_acuity {
 //
 //                }
 //                else {
-                        xFlankers1 = -((2 * TargetStrokewidth) + X)*FlankerDist*2; //left
-                        xFlankers2 = (2 * TargetStrokewidth + X)*FlankerDist*2; //right
+                        xFlankers1 = -((2 * TargetStrokewidth) + X)*FlankerDist; //left
+                        xFlankers2 = (2 * TargetStrokewidth + X)*FlankerDist; //right
                         xFlankers3 = (X); //bottom
                         xFlankers4 = (X); //top
 
                         yFlankers1 = (Y); //left
                         yFlankers2 = (Y); //right
-                        yFlankers3 = (-5.f * (2 * TargetStrokewidth  + Y))*FlankerDist*2; //bottom
-                        yFlankers4 = (5.f * (2 * TargetStrokewidth + Y))*FlankerDist*2; //top
+                        yFlankers3 = (-5.f * (2 * TargetStrokewidth  + Y))*FlankerDist; //bottom
+                        yFlankers4 = (5.f * (2 * TargetStrokewidth + Y))*FlankerDist; //top
                         // break;
 //                }
 //                case 2: // horizontal only

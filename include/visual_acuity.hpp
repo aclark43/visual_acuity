@@ -196,7 +196,7 @@ namespace user_tasks::visual_acuity {
     int Uncrowded;
     int FlankerType;
     bool RandFlankerDist;
-    int FlankerDist;
+    float FlankerDist;
     int FlankerOrientations;
     int IsPest;
     int PestInit,pestLevel,initLevel;
