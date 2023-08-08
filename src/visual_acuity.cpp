@@ -434,10 +434,10 @@ namespace user_tasks::visual_acuity {
 
 
 
-                        m_flankers1->setSize(1 * TargetStrokewidth, 5 * TargetStrokewidth);
-                        m_flankers2->setSize(1 * TargetStrokewidth, 5 * TargetStrokewidth);
-                        m_flankers3->setSize(1 * TargetStrokewidth, 5 * TargetStrokewidth);
-                        m_flankers4->setSize(1 * TargetStrokewidth, 5 * TargetStrokewidth);
+                        m_flankers1->setSize(2 * TargetStrokewidth, 10 * TargetStrokewidth);
+                        m_flankers2->setSize(2 * TargetStrokewidth, 10 * TargetStrokewidth);
+                        m_flankers3->setSize(2 * TargetStrokewidth, 10 * TargetStrokewidth);
+                        m_flankers4->setSize(2 * TargetStrokewidth, 10 * TargetStrokewidth);
 
                     }
                     if (UnStab == true)
@@ -616,7 +616,7 @@ namespace user_tasks::visual_acuity {
                 {
                     if (pestLevel - floor(pestLevel) > 0)
                     {
-                        info("Fractional stroke width value: "+ std::to_string(pestLevel));
+                        info("Pest Level: "+ std::to_string(pestLevel));
                         //endTrial();
                     }
                     TargetStrokewidth = pestLevel;
@@ -626,7 +626,7 @@ namespace user_tasks::visual_acuity {
                     TargetStrokewidth = FixedTargetStrokewidth/pixelAngle; // 1 = 20/20 line, .8 = 20/16 line
                 }
 
-                info(("Eccentricity:"+ std::to_string(TargetEccentricity),"Target:" + std::to_string(TargetImage),"Strokewidth:" + std::to_string(TargetStrokewidth)));
+                info(("Eccentricity:"+ std::to_string(TargetEccentricity),"Target:" + std::to_string(TargetImage),"Strokewidth:" + std::to_string(TargetStrokewidth*pixelAngle)));
                 info("Condition {} ", Uncrowded);
                 if (Stimulus == 1) {
                     if (Mirror == false & Badal == false) {
@@ -705,7 +705,7 @@ namespace user_tasks::visual_acuity {
                                 break;
                         }
                     }
-                    m_target->setSize(1 * TargetStrokewidth, 5 * TargetStrokewidth);
+                    m_target->setSize(2 * TargetStrokewidth, 10 * TargetStrokewidth);
 
                     if (Uncrowded == 1)
                     {
@@ -735,7 +735,7 @@ namespace user_tasks::visual_acuity {
                             }
                             else if (multi_val == 3)
                             {
-                                FlankerDist = 1.0f;
+                                FlankerDist = 2.0f;
                             }
                             else if (multi_val == 4)
                             {
@@ -743,7 +743,7 @@ namespace user_tasks::visual_acuity {
                             }
                             else if (multi_val == 5)
                             {
-                                FlankerDist = 0.95f;
+                                FlankerDist = 1.15f;
                             }
                             else if (multi_val == 6)
                             {
