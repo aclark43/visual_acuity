@@ -621,13 +621,17 @@ namespace user_tasks::visual_acuity {
                         //endTrial();
                     }
                     TargetStrokewidth = pestLevel;
+                    info(("Eccentricity:"+ std::to_string(TargetEccentricity),"Target:" + std::to_string(TargetImage),"Strokewidth:" + std::to_string(TargetStrokewidth/pixelAngle)));
+
                 }
                 else
                 {
-                    TargetStrokewidth = FixedTargetStrokewidth/pixelAngle; // 1 = 20/20 line, .8 = 20/16 line
+                    TargetStrokewidth = FixedTargetStrokewidth*pixelAngle; // 1 = 20/20 line, .8 = 20/16 line
+                    info(("Eccentricity:"+ std::to_string(TargetEccentricity),"Target:" + std::to_string(TargetImage),"Strokewidth:" + std::to_string(TargetStrokewidth)));
+
                 }
 
-                info(("Eccentricity:"+ std::to_string(TargetEccentricity),"Target:" + std::to_string(TargetImage),"Strokewidth:" + std::to_string(TargetStrokewidth*pixelAngle)));
+                //info(("Eccentricity:"+ std::to_string(TargetEccentricity),"Target:" + std::to_string(TargetImage),"Strokewidth:" + std::to_string(TargetStrokewidth)));
                 info("Condition {} ", Uncrowded);
                 if (Stimulus == 1) {
                     if (Mirror == false & Badal == false) {
@@ -864,7 +868,7 @@ namespace user_tasks::visual_acuity {
                         }
                     }
 
-                    m_target->setSize(5 * TargetStrokewidth, 5 * TargetStrokewidth);
+                    m_target->setSize(TargetStrokewidth, TargetStrokewidth);
                 }
 
                 if (UnStab == true) {
@@ -1465,6 +1469,8 @@ namespace user_tasks::visual_acuity {
         trialDatasave["FixationSize"] = FixationSize;
         trialDatasave["InitPestLevel"] = initLevel;
         trialDatasave["pixelAngle"] = pixelAngle;
+        trialDatasave["FlankerDist"] = FlankerDist;
+
 
         trialDatasave["magnificationFactor"] = magnificationFactor;
         if (Stimulus == 1){

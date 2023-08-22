@@ -202,8 +202,8 @@ namespace user_tasks::visual_acuity {
     int PestInit,pestLevel,initLevel;
     int FixationSize;
     int FixedContrast;
-    int FixedTargetStrokewidth;
-    int TargetStrokewidth;
+    float FixedTargetStrokewidth;
+    float TargetStrokewidth;
     int NTrials;
     int NRecal;
     int BoxSize;
