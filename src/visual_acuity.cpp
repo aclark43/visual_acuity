@@ -128,8 +128,8 @@ namespace user_tasks::visual_acuity {
         m_targetTime = std::chrono::milliseconds(500); //target time
         m_holdTime = std::chrono::milliseconds(getConfiguration()->getHoldTime()); //response time
         FixationSize = getConfiguration() -> getFixationSize()/pixelAngle;
-        if (Stimulus == 1){m_fixation = newSolidPlane(FixationSize,FixationSize,eye::graphics::RGB(0,255,0));}
-        else {m_fixation = newSolidPlane(FixationSize,FixationSize,eye::graphics::RGB(0,255,0));}
+        if (Stimulus == 1){m_fixation = newSolidPlane(FixationSize,FixationSize,eye::graphics::RGB(105,105,105));}
+        else {m_fixation = newSolidPlane(FixationSize,FixationSize,eye::graphics::RGB(255,255,255));}
 
         m_fixation->setPosition(0,0);
         m_fixation->setSize(FixationSize, FixationSize);
@@ -444,7 +444,7 @@ namespace user_tasks::visual_acuity {
                     if (UnStab == true)
                             {
 
-                                m_target->setPosition(X, Y); // sk change
+                                m_target->setPosition(X+TargetEccentricity, Y); // sk change
                                 //info("I am here");
                                 //m_target->setPosition(X, Y);
                                 m_target->show();
@@ -626,8 +626,18 @@ namespace user_tasks::visual_acuity {
                 }
                 else
                 {
-                    TargetStrokewidth = FixedTargetStrokewidth*pixelAngle; // 1 = 20/20 line, .8 = 20/16 line
-                    info(("Eccentricity:"+ std::to_string(TargetEccentricity),"Target:" + std::to_string(TargetImage),"Strokewidth:" + std::to_string(TargetStrokewidth)));
+                    if (Stimulus == 1){
+                        TargetStrokewidth = FixedTargetStrokewidth*pixelAngle; // 1 = 20/20 line, .8 = 20/16 line
+                        info(("Eccentricity:"+ std::to_string(TargetEccentricity),"Target:" + std::to_string(TargetImage),"Strokewidth:" + std::to_string(TargetStrokewidth)));
+
+                    }
+                    else{
+                        TargetStrokewidth = FixedTargetStrokewidth; // 1 = 20/20 line, .8 = 20/16 line
+                        info(("Eccentricity:"+ std::to_string(TargetEccentricity),"Target:" + std::to_string(TargetImage),"Strokewidth:" + std::to_string(TargetStrokewidth)));
+
+                    }
+                   // TargetStrokewidth = FixedTargetStrokewidth*pixelAngle; // 1 = 20/20 line, .8 = 20/16 line
+                    //info(("Eccentricity:"+ std::to_string(TargetEccentricity),"Target:" + std::to_string(TargetImage),"Strokewidth:" + std::to_string(TargetStrokewidth)));
 
                 }
 
