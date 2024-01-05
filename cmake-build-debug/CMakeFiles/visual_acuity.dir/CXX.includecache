@@ -3444,6 +3444,22 @@ basic/types.hpp
 eye/protocol.hpp
 -
 
+/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/src/Pest.cpp
+cstdlib
+-
+time.h
+-
+iostream
+-
+fstream
+-
+Pest.h
+/home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/src/Pest.h
+math.h
+-
+cstring
+-
+
 /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/src/visual_acuity.cpp
 visual_acuity.hpp
 /home/eyeris/runtime/dev_ws/user_tasks/visual_acuity/src/visual_acuity.hpp

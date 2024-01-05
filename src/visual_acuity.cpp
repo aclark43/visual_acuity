@@ -125,10 +125,10 @@ namespace user_tasks::visual_acuity {
 
         m_fixationTime = std::chrono::milliseconds(5000); //
         m_blankScreenTime = std::chrono::milliseconds(400); // blank screen
-        m_targetTime = std::chrono::milliseconds(500); //target time
+        m_targetTime = std::chrono::milliseconds(getConfiguration() -> getTargetTime());//std::chrono::milliseconds(500); //target time
         m_holdTime = std::chrono::milliseconds(getConfiguration()->getHoldTime()); //response time
         FixationSize = getConfiguration() -> getFixationSize()/pixelAngle;
-        if (Stimulus == 1){m_fixation = newSolidPlane(FixationSize,FixationSize,eye::graphics::RGB(105,105,105));}
+        if (Stimulus == 1){m_fixation = newSolidPlane(FixationSize,FixationSize,eye::graphics::RGB(255,255,255));}
         else {m_fixation = newSolidPlane(FixationSize,FixationSize,eye::graphics::RGB(255,255,255));}
 
         m_fixation->setPosition(0,0);
