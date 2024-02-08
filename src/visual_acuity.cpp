@@ -720,6 +720,22 @@ namespace user_tasks::visual_acuity {
                                 break;
                         }
                     }
+                    else if (Mirror == true & Badal == false) {
+                        switch (TargetImage) {
+                            case 1:
+                                m_target = newImagePlane("3_mirror.tga");
+                                break;
+                            case 2:
+                                m_target = newImagePlane("5_mirror.tga");
+                                break;
+                            case 3:
+                                m_target = newImagePlane("6_mirror.tga");
+                                break;
+                            case 4:
+                                m_target = newImagePlane("9_mirror.tga");
+                                break;
+                        }
+                    }
                     m_target->setSize(2 * TargetStrokewidth, 10 * TargetStrokewidth);
 
                     if (Uncrowded == 1)
