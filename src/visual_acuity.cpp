@@ -106,7 +106,9 @@ namespace user_tasks::visual_acuity {
 
         pixelAngle = getAngleConverter()->pixel2ArcminH(1.f);
         scotomaPixelAngleSize = 15.2896/pixelAngle;
+        IsPest = getConfiguration()->getIsPest();
         PestInit = getConfiguration() -> getPestInit();
+        FixedTargetStrokewidth = getConfiguration()->getFixedTargetStrokewidth();
         MagFactor = getConfiguration() -> getMagFactor();
         TargetEccentricity = round(getConfiguration() -> getTargetEccentricity()/pixelAngle);
         Uncrowded = getConfiguration() -> getUncrowded();
@@ -269,7 +271,7 @@ namespace user_tasks::visual_acuity {
 
 
         float x, y;
-
+        // Main state machine control
         switch (m_state) {
             case STATE_LOADING:
             {
@@ -415,7 +417,7 @@ namespace user_tasks::visual_acuity {
                     trialDatasave["fixationTrial"] = 0;
                     m_target->hide();
                     info("Entering State Response");
-                    info("setting wait resp to 0");
+                    //info("setting wait resp to 0");
                     m_timerHold.start(m_holdTime);
                     TimeHoldON = m_timer.getTime();
                     storeUserEvent("responseON");
@@ -460,7 +462,7 @@ namespace user_tasks::visual_acuity {
                     else if (UnStab == false)
                             {
                                 auto slice = data->getLatest();
-                                m_target->setPosition(getAngleConverter()->arcmin2PixelH(slice->calibrated1.x()) + xshift,
+                                m_target->setPosition(getAngleConverter()->arcmin2PixelH(slice->calibrated1.x()) + xshift + TargetEccentricity,
                                 getAngleConverter()->arcmin2PixelV(slice->calibrated1.y()) + yshift); // AMC Updated
                                 //info("I am here");
                                 //m_target->setPosition(X, Y);
@@ -568,8 +570,7 @@ namespace user_tasks::visual_acuity {
             info("\n Trial number: " + std::to_string(TrialNumber));
         }
 
-        IsPest = getConfiguration()->getIsPest();
-        FixedTargetStrokewidth = getConfiguration()->getFixedTargetStrokewidth();
+
         hideAllObjects();
 
         if (TestCalibration == 1) {
@@ -617,7 +618,7 @@ namespace user_tasks::visual_acuity {
                 {
                     if (pestLevel - floor(pestLevel) > 0)
                     {
-                        info("Pest Level: "+ std::to_string(pestLevel));
+                        //info("Pest Level: "+ std::to_string(pestLevel));
                         //endTrial();
                     }
                     TargetStrokewidth = pestLevel;
@@ -632,7 +633,7 @@ namespace user_tasks::visual_acuity {
 
                     }
                     else{
-                        TargetStrokewidth = FixedTargetStrokewidth; // 1 = 20/20 line, .8 = 20/16 line
+                        TargetStrokewidth = FixedTargetStrokewidth/pixelAngle; // 1 = 20/20 line, .8 = 20/16 line
                         info(("Eccentricity:"+ std::to_string(TargetEccentricity),"Target:" + std::to_string(TargetImage),"Strokewidth:" + std::to_string(TargetStrokewidth)));
 
                     }
@@ -680,23 +681,23 @@ namespace user_tasks::visual_acuity {
                                 break;
                         }
                     }
-                    else if (Mirror == false & Badal == true) {
+                    else if (Mirror == true & Badal == false) {
                         switch (TargetImage) {
                             case 1:
-                                m_target = newImagePlane("3_20x100-2.tga");
-                                m_target->setAngle(180);
+                                m_target = newImagePlane("3_mirror.tga");
+                                //m_target->setAngle(180);
                                 break;
                             case 2:
-                                m_target = newImagePlane("5_20x100-2.tga");
-                                m_target->setAngle(180);
+                                m_target = newImagePlane("5_mirror.tga");
+                                //m_target->setAngle(180);
                                 break;
                             case 3:
-                                m_target = newImagePlane("6_20x100-2.tga");
-                                m_target->setAngle(180);
+                                m_target = newImagePlane("6_mirror.tga");
+                               // m_target->setAngle(180);
                                 break;
                             case 4:
-                                m_target = newImagePlane("9_20x100-2.tga");
-                                m_target->setAngle(180);
+                                m_target = newImagePlane("9_mirror.tga");
+                               // m_target->setAngle(180);
                                 break;
                         }
                     }
@@ -737,7 +738,7 @@ namespace user_tasks::visual_acuity {
                         //FlankerDist = 1.4;
                         //FlankerOrientations = -1; // uncrowded, will change if crowded
                         //float optoDim = 5.0;
-                        info("multi_val = {}", multi_val);
+                        //info("multi_val = {}", multi_val);
                         if( RandFlankerDist == true)
                         {
                             if (multi_val == 1)
@@ -1277,9 +1278,8 @@ namespace user_tasks::visual_acuity {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     void visual_acuity::streamJoypad(const eye::signal::DataSliceJoypadBlock::ptr_t& data) {
         auto joypad = data->getLatest();
-        if (m_state == STATE_TESTCALIBRATION)
-            if (Badal == false)
-            {
+        if (m_state == STATE_TESTCALIBRATION) {
+            if (Badal == false && Mirror == false) {
                 if (joypad->isButtonPressed(source_joypad::joypad_buttons_e::BUTTON_UP)) // moving the cursor up
                 {
                     yPos = yPos + Increment; //position of the cross
@@ -1299,99 +1299,210 @@ namespace user_tasks::visual_acuity {
 
                 }
 
-            }
-            else
-            {
+            } else if (Badal == true && Mirror == true) {
                 if (joypad->isButtonPressed(source_joypad::joypad_buttons_e::BUTTON_UP)) // moving the cursor up
                 {
                     yPos = yPos - Increment; //position of the cross
-                } else if (joypad->isButtonPressed(source_joypad::joypad_buttons_e::BUTTON_DOWN)) // moving the cursor down
+                } else if (joypad->isButtonPressed(
+                        source_joypad::joypad_buttons_e::BUTTON_DOWN)) // moving the cursor down
                 {
                     yPos = yPos + Increment;
-                } else if (joypad->isButtonPressed(source_joypad::joypad_buttons_e::BUTTON_RIGHT)) // moving the cursor to the right
+                } else if (joypad->isButtonPressed(
+                        source_joypad::joypad_buttons_e::BUTTON_RIGHT)) // moving the cursor to the right
                 {
                     xPos = xPos + Increment;
 
-                } else if (joypad->isButtonPressed(source_joypad::joypad_buttons_e::BUTTON_LEFT)) // moving the cursor to the left
+                } else if (joypad->isButtonPressed(
+                        source_joypad::joypad_buttons_e::BUTTON_LEFT)) // moving the cursor to the left
                 {
                     xPos = xPos - Increment;
 
                 }
 
+            } else if (Mirror == true && Badal == false) {
+                if (joypad->isButtonPressed(source_joypad::joypad_buttons_e::BUTTON_UP)) // moving the cursor up
+                {
+                    yPos = -yPos + Increment; //position of the cross
+                } else if (joypad->isButtonPressed(
+                        source_joypad::joypad_buttons_e::BUTTON_DOWN)) // moving the cursor down
+                {
+                    yPos = -yPos - Increment;
+                } else if (joypad->isButtonPressed(
+                        source_joypad::joypad_buttons_e::BUTTON_RIGHT)) // moving the cursor to the right
+                {
+                    xPos = -xPos - Increment;
+
+                } else if (joypad->isButtonPressed(
+                        source_joypad::joypad_buttons_e::BUTTON_LEFT)) // moving the cursor to the left
+                {
+                    xPos = -xPos + Increment;
+
+                }
             }
 
-        if (joypad->isButtonPressed(source_joypad::joypad_buttons_e::BUTTON_R1)) // finalize the response
-        {
-            ResponseFinalize = 1;
+            if (joypad->isButtonPressed(source_joypad::joypad_buttons_e::BUTTON_R1)) // finalize the response
+            {
+                ResponseFinalize = 1;
+            }
         }
 
         if (m_state != STATE_RESPONSE) return;
         if (m_state == STATE_RESPONSE) {
             if (Stimulus == 1) {
-                // Left
-                if (joypad->isButtonPressed(source_joypad::joypad_buttons_e::BUTTON_LEFT)) {
-                    if (loc.x == 0) {
-                        loc.x = -BoxSize * 2;
+                if (Badal == true)
+                {
+                    if (joypad->isButtonPressed(source_joypad::joypad_buttons_e::BUTTON_LEFT)) {
+                        if (loc.x == 0) {
+                            loc.x = -BoxSize * 2;
 
-                        m_box2->setColor(eye::graphics::RGB(0, 0, 0));
-                        m_box3->setColor(eye::graphics::RGB(0, 0, 0));
-                        m_box4->setColor(eye::graphics::RGB(0, 0, 0));
-                        m_box1->setColor(eye::graphics::RGB(255, 0, 0));
-                        Response = 1;
-                    } else if (loc.x == BoxSize * 2) {
-                        loc.x = 0;
+                            m_box2->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box3->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box4->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box1->setColor(eye::graphics::RGB(255, 0, 0));
+                            Response = 1;
+                        } else if (loc.x == BoxSize * 2) {
+                            loc.x = 0;
 
-                        m_box3->setColor(eye::graphics::RGB(0, 0, 0));
-                        m_box1->setColor(eye::graphics::RGB(0, 0, 0));
-                        m_box4->setColor(eye::graphics::RGB(0, 0, 0));
-                        m_box2->setColor(eye::graphics::RGB(255, 0, 0));
+                            m_box3->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box1->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box4->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box2->setColor(eye::graphics::RGB(255, 0, 0));
 
-                        Response = 2;
-                    } else if (loc.x == BoxSize * 4) {
-                        loc.x = BoxSize * 2;
+                            Response = 2;
+                        } else if (loc.x == BoxSize * 4) {
+                            loc.x = BoxSize * 2;
 
-                        m_box4->setColor(eye::graphics::RGB(0, 0, 0));
-                        m_box1->setColor(eye::graphics::RGB(0, 0, 0));
-                        m_box2->setColor(eye::graphics::RGB(0, 0, 0));
-                        m_box3->setColor(eye::graphics::RGB(255, 0, 0));
+                            m_box4->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box1->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box2->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box3->setColor(eye::graphics::RGB(255, 0, 0));
 
-                        Response = 3;
+                            Response = 3;
+                        }
+                    }
+
+                    if (joypad->isButtonPressed(source_joypad::joypad_buttons_e::BUTTON_RIGHT)) {
+                        if (loc.x == 0) {
+                            loc.x = BoxSize * 2;
+
+                            m_box2->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box1->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box4->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box3->setColor(eye::graphics::RGB(255, 0, 0));
+
+                            Response = 3;
+
+                        } else if (loc.x == BoxSize * 2) {
+                            loc.x = BoxSize * 4;
+
+                            m_box3->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box1->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box2->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box4->setColor(eye::graphics::RGB(255, 0, 0));
+
+                            Response = 4;
+                        } else if (loc.x == -BoxSize * 2) {
+                            loc.x = 0;
+
+                            m_box1->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box3->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box4->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box2->setColor(eye::graphics::RGB(255, 0, 0));
+
+                            //ResponseTime = m_timer.getTime();
+                            Response = 2;
+                        }
+
+                    }
+
+                }
+                else {
+                    // Left
+                    if (joypad->isButtonPressed(source_joypad::joypad_buttons_e::BUTTON_LEFT)) {
+                        if (loc.x == 0) {
+                            loc.x = BoxSize * 2;
+
+                            m_box2->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box1->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box4->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box3->setColor(eye::graphics::RGB(255, 0, 0));
+                            Response = 3;
+                        } else if (loc.x == BoxSize * 2) {
+                            loc.x = BoxSize * 4;
+
+                            m_box3->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box2->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box1->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box4->setColor(eye::graphics::RGB(255, 0, 0));
+
+                            Response = 4;
+                        } else if (loc.x == BoxSize * 4) {
+                            loc.x = -BoxSize * 2;
+
+                            m_box4->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box3->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box2->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box1->setColor(eye::graphics::RGB(255, 0, 0));
+
+                            Response = 1;
+                        } else if (loc.x == -BoxSize * 2) {
+                            loc.x = 0;
+
+                            m_box4->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box3->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box1->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box2->setColor(eye::graphics::RGB(255, 0, 0));
+
+                            Response = 2;
+                        }
+
+                    }
+
+                    if (joypad->isButtonPressed(source_joypad::joypad_buttons_e::BUTTON_RIGHT)) {
+                        if (loc.x == 0) {
+                            loc.x = -BoxSize * 2;
+
+                            m_box2->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box3->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box4->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box1->setColor(eye::graphics::RGB(255, 0, 0));
+
+                            Response = 1;
+
+                        } else if (loc.x == BoxSize * 2) {
+                            loc.x = 0;
+
+                            m_box3->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box1->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box4->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box2->setColor(eye::graphics::RGB(255, 0, 0));
+
+                            Response = 2;
+                        } else if (loc.x == -BoxSize * 2) {
+                            loc.x = BoxSize * 4;
+
+                            m_box1->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box3->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box2->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box4->setColor(eye::graphics::RGB(255, 0, 0));
+
+                            //ResponseTime = m_timer.getTime();
+                            Response = 4;
+                        } else if (loc.x == BoxSize * 4) {
+                            loc.x = BoxSize * 2;
+                            m_box1->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box2->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box4->setColor(eye::graphics::RGB(0, 0, 0));
+                            m_box3->setColor(eye::graphics::RGB(255, 0, 0));
+
+                            //ResponseTime = m_timer.getTime();
+                            Response = 3;
+                        }
+
+
                     }
                 }
 
-                if (joypad->isButtonPressed(source_joypad::joypad_buttons_e::BUTTON_RIGHT)) {
-                    if (loc.x == 0) {
-                        loc.x = BoxSize * 2;
-
-                        m_box2->setColor(eye::graphics::RGB(0, 0, 0));
-                        m_box1->setColor(eye::graphics::RGB(0, 0, 0));
-                        m_box4->setColor(eye::graphics::RGB(0, 0, 0));
-                        m_box3->setColor(eye::graphics::RGB(255, 0, 0));
-
-                        Response = 3;
-
-                    } else if (loc.x == BoxSize * 2) {
-                        loc.x = BoxSize * 4;
-
-                        m_box3->setColor(eye::graphics::RGB(0, 0, 0));
-                        m_box1->setColor(eye::graphics::RGB(0, 0, 0));
-                        m_box2->setColor(eye::graphics::RGB(0, 0, 0));
-                        m_box4->setColor(eye::graphics::RGB(255, 0, 0));
-
-                        Response = 4;
-                    } else if (loc.x == -BoxSize * 2) {
-                        loc.x = 0;
-
-                        m_box1->setColor(eye::graphics::RGB(0, 0, 0));
-                        m_box3->setColor(eye::graphics::RGB(0, 0, 0));
-                        m_box4->setColor(eye::graphics::RGB(0, 0, 0));
-                        m_box2->setColor(eye::graphics::RGB(255, 0, 0));
-
-                        //ResponseTime = m_timer.getTime();
-                        Response = 2;
-                    }
-
-                }
 
                 if (joypad->isButtonPressed(source_joypad::joypad_buttons_e::BUTTON_R1))// finalize the response
                 {
@@ -1580,6 +1691,28 @@ namespace user_tasks::visual_acuity {
             m_num4->setSize(2 * (BoxSize / 10), 10 * (BoxSize / 10));
             m_num4->setAngle(180);
 
+        }
+        else if (Mirror == true && Badal == false)
+        {
+            m_num1 = newImagePlane("3_mirror.tga");
+            m_num1->enableTransparency(true);
+            m_num1->setSize(2 * (BoxSize / 10), 10 * (BoxSize / 10));
+           // m_num1->setAngle(180);
+
+            m_num2= newImagePlane("5_mirror.tga");
+            m_num2->enableTransparency(true);
+            m_num2->setSize(2 * (BoxSize / 10), 10 * (BoxSize / 10));
+            //m_num2->setAngle(180);
+
+            m_num3 = newImagePlane("6_mirror.tga");
+            m_num3->enableTransparency(true);
+            m_num3->setSize(2 * (BoxSize / 10), 10 * (BoxSize / 10));
+            //m_num3->setAngle(180);
+
+            m_num4 = newImagePlane("9_mirror.tga");
+            m_num4->enableTransparency(true);
+            m_num4->setSize(2 * (BoxSize / 10), 10 * (BoxSize / 10));
+            //m_num4->setAngle(180);
         }
         else
         {
